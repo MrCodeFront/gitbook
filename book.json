@@ -1,0 +1,19 @@
+{
+  "root": "./doc",
+  "title": "CodeFront Document",
+  "author": "lkf",
+  "description": "",
+  "language": "zh-hans",
+  "gitbook": "3.2.3",
+  "plugins": [
+    "-lunr",
+    "-search",
+    "search-plus",
+    "expandable-chapters",
+    "theme-comscore",
+    "tbfed-pagefooter@^0.0.1",
+    "prism@^2.1.0",
+    "prism-themes@^0.0.2",
+    "copy-code-button"
+  ]
+}

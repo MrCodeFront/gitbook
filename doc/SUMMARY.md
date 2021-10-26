@@ -4,7 +4,7 @@
 * [javascript]()
   * [DOM对象属性、鼠标事件](javascript/DOM对象属性、鼠标事件.md)
   * [file操作](javascript/file操作.md)
-<!-- * [typescrpit]()
+  <!-- * [typescrpit]()
   * [](typescrpit/) -->
 * [angular]()
   * [angular](angular/angular.md)
@@ -13,7 +13,7 @@
   * [vue3.0开发事项](vue/vue3.0开发事项.md)
 * [ionic]()
   * [ionic插件](ionic/ionic插件.md)
-<!-- * [java]() -->
+  <!-- * [java]() -->
 * [android]()
   * [Android学习](android/Android学习.md)
-<!-- * [socket]() -->
+  <!-- * [socket]() -->

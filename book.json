@@ -5,6 +5,9 @@
   "description": "",
   "language": "zh-hans",
   "gitbook": "3.2.3",
+  "structure": {
+    "readme": "README.md"
+  },
   "plugins": [
     "-lunr",
     "-search",
@@ -18,7 +21,8 @@
     "code",
     "expandable-chapters-small",
     "github",
-    "my-toolbar"
+    "my-toolbar",
+    "hide-element"
   ],
   "pluginsConfig": {
     "tbfed-pagefooter": {
@@ -27,7 +31,7 @@
       "modify_format": "YYYY-MM-DD HH:mm:ss"
     },
     "github": {
-      "url": "https://github.com/MrCodeFront"
+      "url": "https://github.com/MrCodeFront/my-gitbook"
     },
     "my-toolbar": {
       "buttons": [{
@@ -38,6 +42,14 @@
         "text": "下载PDF",
         "target": "_blank"
       }]
+    },
+    "hide-element": {
+      "elements": [
+        ".gitbook-link"
+      ]
     }
+  },
+  "styles": {
+    "website": "./styles/website.css"
   }
 }

@@ -1,6 +1,7 @@
 * [日常工作]()
   * [工作信息](日常工作/工作信息.md)
   * [周报模板](日常工作/周报模板.md)
+* [git](git/git.md)
 * [javascript]()
   * [DOM对象属性、鼠标事件](javascript/DOM对象属性、鼠标事件.md)
   * [file操作](javascript/file操作.md)
@@ -13,6 +14,7 @@
   * [vue3.0开发事项](vue/vue3.0开发事项.md)
 * [ionic]()
   * [ionic插件](ionic/ionic插件.md)
+  * [app打包及上传](ionic/app打包及上传.md)
   <!-- * [java]() -->
 * [android]()
   * [Android学习](android/Android学习.md)

@@ -1,19 +1,19 @@
-### Android 学习
+# Android 学习
 
 ---
 
-词汇：
+##### 词汇
 
 AVD（安卓虚拟设备）
 
-
-
 ##### 应用组件(共4种)
 
-+ Activity
-+ 服务
-+ 广播接收器
-+ 内容提供程序
+```
+1.Activity
+2.服务
+3.广播接收器
+4.内容提供程序
+```
 
 [https://developer.android.google.cn/guide/components/fundamentals](https://developer.android.google.cn/guide/components/fundamentals)
 
@@ -31,10 +31,10 @@ AVD（安卓虚拟设备）
 
 [https://developer.android.google.cn/guide/topics/manifest/uses-sdk-element#ApiLevels](https://developer.android.google.cn/guide/topics/manifest/uses-sdk-element#ApiLevels)
 
-> 什么是API级别
->
+###### 什么是API级别
+
 > API 级别是对 Android 平台版本提供的框架 API 修订版进行唯一标识的整数值。
->
+
 > Android 平台提供一种框架 API，应用可利用它与底层 Android 系统进行交互。该框架 API 由以下部分组成：
 >
 > - 一组核心软件包和类

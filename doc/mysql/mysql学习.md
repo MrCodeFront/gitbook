@@ -20,6 +20,20 @@ https://dev.mysql.com/downloads/mysql
 企业版（收费）
 ```
 
+### MySQL 8.0 报错解决
+
+```
+参考：https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server
+
+express mysql
+
+登录 mysql 并分别执行以下代码：
+alter user 'root'@'localhost' identified with mysql_native_password by '密码';
+flush privileges;
+```
+
+
+
 #### 启动和停止 mysql 服务
 
 ```shell
@@ -115,6 +129,198 @@ union联合查询
 ```
 事务和事务处理
 ```
+
+#### SELECT
+
+```
+语法：SELECT 查询列表 FROM 表名;
+特点：
+1、查询列表可以是：表中的字段、常量值、表达式、函数
+2、查询的结果是一个虚拟表格
+```
+
+##### 起别名
+```sql
+1.SELECT 字段名 AS 别名 FROM 表名;
+2.使用空格：SELECT 字段名 别名 FROM 表名;
+```
+
+##### 去重(DISTINCT)
+
+```sql
+SELECT DISTINCT 字段名 FROM 表名;
+```
+
+##### 连接(CONCAT)
+
+```sql
+SELECT CONCAT(str1,str2,...) AS 别名 FROM 表名;
+```
+
+##### 判断(IFNULL)
+
+```sql
+SELECT IFNULL(expr1,expr2) AS 别名 FROM 表名;
+```
+
+##### 查看表结构
+
+```sql
+DESC 表名;
+```
+
+#### 条件查询
+
+```
+语法：
+	SELECT
+		查询列表
+	FROM
+		表名
+	WHERE
+		筛选条件;
+
+分类：
+	一、按条件表达式筛选
+		> < = <> >= <=
+	二、按逻辑表达式筛选
+		and or not
+	三、模糊查询
+		like
+		between and
+		in
+		is null
+		
+```
+
+##### 查询第几个字符，使用 "_" 通配符
+
+```sql
+SELECT 查询列表 FROM 表名 WHERE 列名 LIKE '__n_l%';
+
+查询含有 "_" 字符，需转义
+SELECT 查询列表 FROM 表名 WHERE 列名 LIKE '_\_%';
+或者
+SELECT 查询列表 FROM 表名 WHERE 列名 LIKE '_$_%' ESCAPE '$';
+```
+
+##### ISNULL、IS NOT NULL
+
+```sql
+SELECT 查询列表 FROM 表名 WHERE ISNULL(列名);
+SELECT 查询列表 FROM 表名 WHERE 列名 IS NOT NULL;
+```
+
+##### 安全等于 <=>
+
+```sql
+SELECT 列名 FROM 表名 WHERE 列名 <=> 值;
+```
+
+#### 排序
+
+```sql
+语法:
+	SELECT 
+    	查询列表
+    FROM  
+    	表名
+    [WHERE 筛选条件]
+    ORDER BY 
+    	排序列表 
+    [ASC|DESC],
+    	排序列表
+    [ASC|DESC],
+    	...;
+特点：
+	1.ASC 代表升序，DESC 代表降序。不写默认升序。
+	2.ORDER BY 子句支持单个字段、多个字段、表达式、函数、别名。
+	3.ORDER BY 子句以一般是放在查询语句的最后，limit 子句除外。
+```
+
+#### 函数
+
+```SQL
+概念：将一组逻辑语句封装子啊方法体中，对外暴露方法名。
+好处：
+	1.隐藏了实现细节
+	2.提高代码的重用性
+调用：SELECT 函数名(参数列表) [FROM 表名];
+分类：
+	1.普通函数
+		字符函数
+		数学函数
+		日期函数
+		其他函数
+		流程控制函数
+	2.分组函数
+	功能：做统计使用，又称为统计函数、聚合函数、组函数
+		
+```
+
+```sql
+查看字符集：
+SHOW VARIABLES LIKE '%char%';
+```
+
+##### 字符函数
+
+```sql
+-- UPPER 转大写
+SELECT UPPER(str);
+
+-- LOWER 转小写
+SELECT LOWER(str);
+
+-- CONCAT 拼接
+SELECT CONCAT(str,str,...);
+
+-- SUBSTR 字符串截取
+SELECT SUBSTR(str,start,[end]);
+
+-- INSTR 获取字符所在位置
+SELECT INSTR(str,str);
+
+-- TRIM 去左右字符
+SELECT TRIM(str);
+
+-- LPAD 左填充
+SELECT LPAD(str,填充个数,填充字符);
+
+-- RPAD 右填充
+SELECT RPAD(str,填充个数,填充字符);
+
+-- EPLACE 替换
+SELECT EPLACE(str,需要替换的字符,替换后的字符);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

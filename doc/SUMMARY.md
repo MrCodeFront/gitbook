@@ -4,7 +4,7 @@
 * [git](git/git.md)
 * [javascript]()
   * [DOM对象属性、鼠标事件](javascript/DOM对象属性、鼠标事件.md)
-  * [file操作](javascript/file操作.md)
+  * [前端实用方法](javascript/前端实用方法.md)
   <!-- * [typescrpit]()
   * [](typescrpit/) -->
 * [angular]()
@@ -12,6 +12,7 @@
 * [vue]()
   * [vue3.0](vue/vue3.0.md)
   * [vue3.0开发事项](vue/vue3.0开发事项.md)
+  * [vue细节处理](vue/vue细节处理.md)
 * [ionic]()
   * [ionic插件](ionic/ionic插件.md)
   * [app打包及上传](ionic/app打包及上传.md)

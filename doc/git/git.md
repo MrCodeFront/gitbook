@@ -11,6 +11,12 @@ git config --global user.email ""
 git config -l
 ```
 
+##### 删除本地缓存
+
+```bash
+git rm -r --cached .
+```
+
 ##### 查看分支
 
 ```bash

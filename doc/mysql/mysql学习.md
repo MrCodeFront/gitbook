@@ -266,6 +266,9 @@ SHOW VARIABLES LIKE '%char%';
 ##### 字符函数
 
 ```sql
+-- LENGTH 长度
+SELECT LENGTH(str);
+
 -- UPPER 转大写
 SELECT UPPER(str);
 
@@ -294,7 +297,95 @@ SELECT RPAD(str,填充个数,填充字符);
 SELECT EPLACE(str,需要替换的字符,替换后的字符);
 ```
 
+##### 数学函数
 
+```sql
+-- ROUND 四舍五入
+SELECT ROUND(数值);
+SELECT ROUND(数值,保留位数);
+
+-- CEIL 向上取整
+SELECT CEIL(数值);
+
+-- FLOOR 向下取整
+SELECT FLOOR(数值);
+
+-- TRUNCATE 截断
+SELECT TRUNCATE(数值,截断位数);
+
+-- MOD 取余
+SELECT MOD(被除数,除数);
+```
+
+##### 日期函数
+
+```sql
+%Y：年（4位）
+%y：年（2位）
+%m：月（2位）
+%c：月（1位）
+%d：日（2位）
+%H：小时（24小时制）
+%h：小时（12小时制）
+%i：分钟
+%s：秒
+
+-- 返回当前系统日期+时间
+SELECT NOW();
+
+-- CURDATE 返回当前系统日期，不包含时间
+SELECT CURDATE();
+
+-- CURTIME 返回当前时间，不包含日期
+SELECT CURTIME();
+
+-- 获取指定的部分，年月日时分秒
+SELECT YEAR(NOW()) 年;
+SELECT YEAR('1994-9-28') 年;
+SELECT MONTH(NOW()) 月;
+-- 英文名
+SELECT MONTHNAME(NOW()) 月;
+
+-- STR_TO_DATE 将日期格式的字符转换成指定的日期格式 YYYY-MM-DD
+SELECT STR_TO_DATE('1994-9-28','%Y-%c-%d');
+SELECT STR_TO_DATE('9-28 1994','%c-%d %Y');
+
+-- DATE_FORMAT 将日期转换成字符串
+SELECT DATE_FORMAT(NOW(),'%Y年%m月%d日');
+```
+
+##### 其他函数
+
+```sql
+SELECT VERSION();	// 查看mysql版本
+SELECT DATABASE();	// 查看当前数据库
+SELECT USER();		// 查看当前库的用户
+```
+
+##### 流程控制函数
+
+```sql
+-- IF 函数
+SELECT IF(10>5,'大','小');
+
+-- CASE 函数
+SELECT salary,department_id,
+CASE department_id
+	WHEN 30 THEN salary*1.1
+	WHEN 40 THEN salary*1.2
+	WHEN 50 THEN salary*1.3
+END AS 新工资
+FROM employees;
+
+SELECT salary,
+CASE
+	WHEN salary>20000 THEN 'A'
+	WHEN salary>15000 THEN 'B'
+	WHEN salary>10000 THEN 'C'
+	ELSE 'D'
+END AS 工资等级
+FROM employees;
+```
 
 
 

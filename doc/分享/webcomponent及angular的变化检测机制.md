@@ -15,4 +15,3 @@
 ```js
 customElements.define(name, constructor, options);
 ```
-

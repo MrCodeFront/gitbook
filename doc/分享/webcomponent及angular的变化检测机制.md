@@ -42,15 +42,11 @@ Web Components旨在解决这些问题 — 它由三项主要技术组成，它�
 
 CustomElementRegistry：**`CustomElementRegistry`**接口提供注册自定义元素和查询已注册元素的方法。要获取它的实例，请使用 [`window.customElements`](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/customElements)属性。
 
-
-
 ##### 3.语法
 
 ```js
 customElements.define(name, constructor, options);
 ```
-
-
 
 ##### 4.[生命周期回调](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks)
 
@@ -140,8 +136,6 @@ class ElementA extends HTMLElement {
 
 customElements.define(name, ElementA);
 ```
-
-
 
 ##### 8.实战
 
@@ -244,5 +238,173 @@ customElements.define('code-front', CodeFront);
 
 
 
+---
+
+
+
 #### angular的变化检测机制
+
+
+
+参考：
+
+https://blog.csdn.net/zyxzp2012/article/details/90208489
+
+
+
+##### 什么是变更检测
+
+变更检测的基本任务是获得程序的内部状态并使之在用户界面可见。这个状态可以是任意的数据类型。
+
+##### 引起变更原因
+
+异步（Event、xhr、定时器）操作改变了程序的状态，导致视图的更新。
+
+##### Angular 内的处理
+
+Angular 有着自己的zone，称为NgZone。Angular源码的某个地方，有一个东西叫做ApplicationRef，它监听NgZones的onTurnDone事件。只要这个事件发生了，它就执行tick()函数，这个函数执行变更检测
+
+```ts
+// 真实源码的非常简化版本。
+class ApplicationRef { 
+  changeDetectorRefs:ChangeDetectorRef[] = []; 
+  constructor(private zone: NgZone) { 
+  	this.zone.onTurnDone.subscribe(() => this.zone.run(() => this.tick()); 
+  } 
+  tick() { 
+  	this.changeDetectorRefs .forEach((ref) => ref.detectChanges());
+  }
+}
+```
+
+##### 变更检测
+
+在 Angular 中，每个组件都有它自己的 change detector (变更检测器)
+
+[ChangeDetectorRef](https://angular.cn/api/core/ChangeDetectorRef#markForCheck)
+
+> Angular 各种视图的基础类，提供变更检测功能。 变更检测树会收集要检查的所有视图。 使用这些方法从树中添加或移除视图、初始化变更检测并显式地把这些视图标记为*脏的*，意思是它们变了、需要重新渲染。
+
+OnPush 的两种状态：https://angular.cn/api/core/ChangeDetectionStrategy
+
+主要方法：
+
+ [abstract markForCheck(): void](https://angular.cn/api/core/ChangeDetectorRef#markForCheck)
+
+ [abstract detach(): void](https://angular.cn/api/core/ChangeDetectorRef#detach)
+
+ [abstract detectChanges(): void](https://angular.cn/api/core/ChangeDetectorRef#detectChanges)
+
+ [abstract checkNoChanges(): void](https://angular.cn/api/core/ChangeDetectorRef#checkNoChanges)
+
+ [abstract reattach(): void](https://angular.cn/api/core/ChangeDetectorRef#reattach)
+
+
+
+![https://img-blog.csdnimg.cn/20190514154723302.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p5eHpwMjAxMg==,size_16,color_FFFFFF,t_70](https://img-blog.csdnimg.cn/20190514154723302.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p5eHpwMjAxMg==,size_16,color_FFFFFF,t_70)
+
+![https://img-blog.csdnimg.cn/20190514154734771.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p5eHpwMjAxMg==,size_16,color_FFFFFF,t_70](https://img-blog.csdnimg.cn/20190514154734771.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p5eHpwMjAxMg==,size_16,color_FFFFFF,t_70)
+
+
+
+变更监听值变化及自定义变更：
+
+> ngOnChanges：检测监听值的变更
+>
+> ngDoCheck：检测和处理 Angular 自己没有捕捉到的变化，可自定义变更检测逻辑
+
+
+
+![https://img-blog.csdnimg.cn/20190514154956406.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p5eHpwMjAxMg==,size_16,color_FFFFFF,t_70](https://img-blog.csdnimg.cn/20190514154956406.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p5eHpwMjAxMg==,size_16,color_FFFFFF,t_70)
+
+![https://img-blog.csdnimg.cn/20190514155100393.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p5eHpwMjAxMg==,size_16,color_FFFFFF,t_70](https://img-blog.csdnimg.cn/20190514155100393.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p5eHpwMjAxMg==,size_16,color_FFFFFF,t_70)
+
+
+
+组件注入 ChangeDetectorRef，并调用 markForCheck 方法，会告诉Angular，标记整条路径，从这个组件到根组件都需要被checked，一旦变更检测结束，它就会恢复为整棵树恢复OnPush状态
+
+![https://img-blog.csdnimg.cn/20190514155147384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p5eHpwMjAxMg==,size_16,color_FFFFFF,t_70](https://img-blog.csdnimg.cn/20190514155147384.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p5eHpwMjAxMg==,size_16,color_FFFFFF,t_70)
+
+![https://img-blog.csdnimg.cn/20190514155157678.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p5eHpwMjAxMg==,size_16,color_FFFFFF,t_70](https://img-blog.csdnimg.cn/20190514155157678.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3p5eHpwMjAxMg==,size_16,color_FFFFFF,t_70)
+
+##### 示例
+
+app.conponent.ts
+
+```typescript
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class AppComponent {
+
+  text = '';
+
+  constructor() { }
+
+  ngOnInit(): void {
+
+  }
+}
+
+```
+
+app.conponent.html
+
+```html
+<app-child [(text)]="text"></app-child>
+```
+
+app-child.ts
+
+```typescript
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
+
+@Component({
+  selector: 'app-child',
+  templateUrl: './child.component.html',
+  styleUrls: ['./child.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
+
+})
+export class ChildComponent implements OnInit {
+
+  @Input() text = '';
+  @Output() textChange = new EventEmitter();
+  
+  obj = {
+    currentValue: '',
+    previousValue: ''
+  }
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
+    this.obj.currentValue = changes['text'].currentValue;
+    this.obj.previousValue = changes['text'].previousValue;
+  }
+
+  change() {
+    this.textChange.emit(this.text);
+  }
+}
+```
+
+app-child.html
+
+```html
+<input type="text" [(ngModel)]="text" (ngModelChange)="change()">
+<br>
+currentValue：{{obj.currentValue}}
+<br>
+previousValue： {{obj.previousValue}}
+```
 

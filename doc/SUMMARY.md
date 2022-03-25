@@ -1,53 +1,40 @@
-* [分享]()
-* [工具]()
-* [日常工作]()
-  * [](.md)
-  * [](.md)
-  * [](.md)
-* [实用工具]()
-  * [](.md)
 * [android]()
-
+  * [Android学习](android\Android学习.md)
+  * [打包](android\打包.md)
 * [angular]()
-
+  * [工作区(多项目、多库)](angular\工作区(多项目、多库).md)
+  * [常用命令](angular\常用命令.md)
+  * [开发问题](angular\开发问题.md)
 * [git]()
-
+  * [常用命令](git\常用命令.md)
+  * [里程碑标签](git\里程碑标签.md)
 * [ionic]()
-
+  * [app打包及上传](ionic\app打包及上传.md)
+  * [ionic插件](ionic\ionic插件.md)
 * [javascript]()
-
+  * [DOM对象属性、鼠标事件](javascript\DOM对象属性、鼠标事件.md)
+  * [前端实用方法](javascript\前端实用方法.md)
 * [mysql]()
-
+  * [mysql学习](mysql\mysql学习.md)
 * [npm]()
-
+  * [npm](npm\npm.md)
+  * [nvm](npm\nvm.md)
+* [styles]()
+  * [website](styles\website.css)
 * [typescript]()
-
 * [vue]()
-
-
-
-
-
-
+  * [vue3](vue\vue3.0.md)
+  * [vue3](vue\vue3.0开发事项.md)
+  * [vue细节处理](vue\vue细节处理.md)
+* [分享]()
+  * [ng-alain](分享\ng-alain.md)
+  * [webcomponent及angular的变化检测机制](分享\webcomponent及angular的变化检测机制.md)
+  * [web分享](分享\web分享.md)
+* [实用工具]()
+  * [11](实用工具\11.md)
+* [工具]()
+  * [特效](工具\特效.md)
 * [日常工作]()
-  * [工作信息](日常工作/工作信息.md)
-  * [周报模板](日常工作/周报模板.md)
-* [git](git/git.md)
-* [javascript]()
-  * [DOM对象属性、鼠标事件](javascript/DOM对象属性、鼠标事件.md)
-  * [前端实用方法](javascript/前端实用方法.md)
-  <!-- * [typescrpit]()
-  * [](typescrpit/) -->
-* [angular]()
-  * [angular](angular/angular.md)
-* [vue]()
-  * [vue3.0](vue/vue3.0.md)
-  * [vue3.0开发事项](vue/vue3.0开发事项.md)
-  * [vue细节处理](vue/vue细节处理.md)
-* [ionic]()
-  * [ionic插件](ionic/ionic插件.md)
-  * [app打包及上传](ionic/app打包及上传.md)
-  <!-- * [java]() -->
-* [android]()
-  * [Android学习](android/Android学习.md)
-  <!-- * [socket]() -->
+  * [app条码](日常工作\app条码.md)
+  * [周报模板](日常工作\周报模板.md)
+  * [工作信息](日常工作\工作信息.md)

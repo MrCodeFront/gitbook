@@ -1,6 +1,15 @@
-var fs = require('fs'); // 引入fs模块
+/**
+ * 生成菜单目录
+ */
 
-const directory = 'doc';
+var fs = require('fs'); // 引入fs模块
+const { basename } = require('path');
+
+const option = {
+  directory: 'doc', // 查询的文件夹
+  createPath: './doc/SUMMARY.md' // 生成文件路径
+}
+
 const directoryList = [];
 
 function walkSync(currentDirPath, callback) {
@@ -9,59 +18,47 @@ function walkSync(currentDirPath, callback) {
   fs.readdirSync(currentDirPath).forEach((name) => {
     var filePath = path.join(currentDirPath, name);
     var stat = fs.statSync(filePath);
-    const menu = filePath.replace(`${directory}\\`, '');
-    if (stat.isFile()) {
+    const menu = filePath.replace(`${option.directory}\\`, '');
+    let tab = '';
+    if (stat.isFile()) {  // 文件处理
       if (menu !== 'README.md' && menu !== 'SUMMARY.md') {
+        for (let i = 0; i < filePath.split('\\').length - 1; i++) {
+          tab += ' ';
+        }
         const i = directoryList.findIndex((item) => item.title === menu.split('\\')[0]);
         if (i > -1) {
-          directoryList[i].children.push({ title: menu, path: menu.replace(`${directory}\\`), '') })
+          directoryList[i].children.push({ title: menu, path: menu.replace(`${option.directory}\\`, '') });
+          fs.writeFileSync(option.createPath, `${tab}* [${name.split('\.')[0]}](${menu.replace(`${option.directory}\\`, '')})\r\n`, { 'flag': 'a' }, function (err) {
+            if (err) {
+              throw err;
+            }
+          });
         }
       }
       callback(filePath, stat);
-    } else if (stat.isDirectory()) {
+    } else if (stat.isDirectory()) {  // 目录处理
       if (menu !== 'README.md' && menu !== 'SUMMARY.md') {
+        for (let i = 0; i < filePath.split('\\').length - 2; i++) {
+          tab += ' ';
+        }
         directoryList.push({ title: menu, children: [] });
+        fs.writeFileSync(option.createPath, `${tab}* [${menu}]()\r\n`, { 'flag': 'a+' }, function (err) {
+          if (err) {
+            throw err;
+          }
+        });
       }
       walkSync(filePath, callback);
     }
   });
 }
 
-
-walkSync(`./${directory}`, (filePath, stat) => {
-
-});
-
-
-setTimeout(() => {
-  directoryList.forEach(item => {
-    console.log(item);
-    fs.writeFile('./test.md', `* [${item.title}]()\r\n`, { 'flag': 'a' }, function (err) {
-      if (err) {
-        throw err;
-      }
-
-      //   fs.readFile('./test.md', 'utf-8', function (err, data) {
-      //     if (err) {
-      //       throw err;
-      //     }
-      //     console.log(data);
-      //   });
-    });
-    item.children.forEach((item2) => {
-      fs.writeFile('./test.md', `  * [${item.title}](${item2.title})\r\n`, { 'flag': 'a' }, function (err) {
-        if (err) {
-          throw err;
-        }
-
-        //   fs.readFile('./test.md', 'utf-8', function (err, data) {
-        //     if (err) {
-        //       throw err;
-        //     }
-        //     console.log(data);
-        //   });
-      });
-    });
+fs.unlink(option.createPath, (err) => {
+  walkSync(`./${option.directory}`, (filePath, stat) => { });
+  fs.readFile(option.createPath, 'utf-8', (err, data) => {
+    if (err) {
+      throw err;
+    }
+    console.log(data);
   });
-}, 1000);
-
+});

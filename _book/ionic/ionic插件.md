@@ -1,0 +1,9 @@
+##### app自动更新
+
+```bash
+npm install @ionic-native/device @ionic-native/app-version
+cordova plugin add cordova-plugin-appversion cordova-plugin-app-update
+```
+
+
+

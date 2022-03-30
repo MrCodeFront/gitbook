@@ -54,6 +54,11 @@ function walkSync(currentDirPath, callback) {
 }
 
 fs.unlink(option.createPath, (err) => {
+  fs.writeFileSync(option.createPath, `* [前言](README.md)\r\n`, { 'flag': 'a+' }, function (err) {
+    if (err) {
+      throw err;
+    }
+  });
   walkSync(`./${option.directory}`, (filePath, stat) => { });
   fs.readFile(option.createPath, 'utf-8', (err, data) => {
     if (err) {

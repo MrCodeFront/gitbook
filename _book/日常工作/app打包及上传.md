@@ -3,16 +3,19 @@
 ##### nestapi.rossai.cn/rossapp	// 添加新应用
 
 ```
-app_version
-app_logo_addr
-platform_type
-app_status
-download_urls
-app_name
-used_customers
-app_device_type
-package_name
-remark
+id: number;
+app_version: string;
+app_logo_addr: string;
+platform_type: string;
+app_status: number;
+download_urls: string;
+app_name: string;
+used_customers: string;
+app_device_type: string;
+package_name: string;
+remark: string;
+create_time: Date;
+update_time: Date;
 ```
 
 ##### nestapi.rossai.cn/rossapp/update/:id	// 更改app应用信息
@@ -29,7 +32,7 @@ app_logo_addr
 ```
 站点：cloudpf.weunit.cn
 密码：Ross_ftp
-文件路径：/mnt/www/www_yly/public/app_download/apk
+文件路径：/mnt/nfs-020/yly_docker/www/public/app_download/apk
 ```
 
 ##### 裁片超市

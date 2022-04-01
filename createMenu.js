@@ -6,8 +6,10 @@ var fs = require('fs'); // 引入fs模块
 const { basename } = require('path');
 
 const option = {
-  directory: 'doc', // 查询的文件夹
-  createPath: './doc/SUMMARY.md' // 生成文件路径
+  directory: 'doc',               // 查询的文件夹
+  createPath: './doc/SUMMARY.md', // 生成文件路径
+  hiddenDirectoryList: ['日常工作'],  // 隐藏目录
+  hiddenFileList: ['README.md', 'SUMMARY.md'] // 隐藏文件
 }
 
 const directoryList = [];
@@ -21,7 +23,7 @@ function walkSync(currentDirPath, callback) {
     const menu = filePath.replace(`${option.directory}\\`, '');
     let tab = '';
     if (stat.isFile()) {  // 文件处理
-      if (menu !== 'README.md' && menu !== 'SUMMARY.md') {
+      if (!option.hiddenFileList.includes(menu)) {
         for (let i = 0; i < filePath.split('\\').length - 1; i++) {
           tab += ' ';
         }
@@ -37,7 +39,7 @@ function walkSync(currentDirPath, callback) {
       }
       callback(filePath, stat);
     } else if (stat.isDirectory()) {  // 目录处理
-      if (menu !== 'README.md' && menu !== 'SUMMARY.md') {
+      if (!option.hiddenDirectoryList.includes(menu)) {
         for (let i = 0; i < filePath.split('\\').length - 2; i++) {
           tab += ' ';
         }

@@ -28,6 +28,7 @@
 * [typescript]()
   * [进阶及高级用法](typescript\进阶及高级用法.md)
 * [vue]()
+  * [devtools](vue\devtools.md)
   * [vue3](vue\vue3.0.md)
   * [vue3](vue\vue3.0开发事项.md)
   * [vue细节处理](vue\vue细节处理.md)

@@ -8,6 +8,12 @@
 
 ![https://www.pnpm.cn/assets/images/cafs-illustration-7be6bd97e43ba11a031b099869321deb.jpg](https://www.pnpm.cn/assets/images/cafs-illustration-7be6bd97e43ba11a031b099869321deb.jpg)
 
+##### 快速
+
+比传统方案安装包的速度快了两倍，以下是官方给出的benchmarks，在多种常见情况下，执行install的速度比较。
+
+![https://pic1.zhimg.com/80/v2-7df19d3adda82c366268b291e378bd8c_720w.jpg](https://pic1.zhimg.com/80/v2-7df19d3adda82c366268b291e378bd8c_720w.jpg)
+
 ##### 安装
 
 ```bash

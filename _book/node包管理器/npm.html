@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>技术选型及代码规范 · CodeFront Document</title>
+        <title>npm · CodeFront Document</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -63,8 +63,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="nvm.html" />
     
-    <link rel="prev" href="webcomponent及angular的变化检测机制.html" />
     
 
     </head>
@@ -461,9 +461,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1" data-path="../node包管理器/npm.html">
+        <li class="chapter active" data-level="1.9.1" data-path="npm.html">
             
-                <a href="../node包管理器/npm.html">
+                <a href="npm.html">
             
                     
                     npm
@@ -474,9 +474,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.2" data-path="../node包管理器/nvm.html">
+        <li class="chapter " data-level="1.9.2" data-path="nvm.html">
             
-                <a href="../node包管理器/nvm.html">
+                <a href="nvm.html">
             
                     
                     nvm
@@ -487,9 +487,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.3" data-path="../node包管理器/pnpm.html">
+        <li class="chapter " data-level="1.9.3" data-path="pnpm.html">
             
-                <a href="../node包管理器/pnpm.html">
+                <a href="pnpm.html">
             
                     
                     pnpm
@@ -622,9 +622,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.12.1" data-path="ng-alain.html">
+        <li class="chapter " data-level="1.12.1" data-path="../分享/ng-alain.html">
             
-                <a href="ng-alain.html">
+                <a href="../分享/ng-alain.html">
             
                     
                     ng-alain
@@ -635,9 +635,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.2" data-path="webcomponent及angular的变化检测机制.html">
+        <li class="chapter " data-level="1.12.2" data-path="../分享/webcomponent及angular的变化检测机制.html">
             
-                <a href="webcomponent及angular的变化检测机制.html">
+                <a href="../分享/webcomponent及angular的变化检测机制.html">
             
                     
                     webcomponent及angular的变化检测机制
@@ -648,9 +648,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.12.3" data-path="技术选型及代码规范.html">
+        <li class="chapter " data-level="1.12.3" data-path="../分享/技术选型及代码规范.html">
             
-                <a href="技术选型及代码规范.html">
+                <a href="../分享/技术选型及代码规范.html">
             
                     
                     技术选型及代码规范
@@ -760,7 +760,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >技术选型及代码规范</a>
+        <a href=".." >npm</a>
     </h1>
 </div>
 
@@ -775,91 +775,40 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h1>
-<blockquote>
-<p>&#x672C;&#x671F;&#x6F14;&#x8BB2;&#x5185;&#x5BB9;&#x5305;&#x542B;: </p>
-<ol>
-<li><a href="#&#x6280;&#x672F;&#x9009;&#x578B;">&#x6280;&#x672F;&#x9009;&#x578B;</a></li>
-<li><a href="#&#x9879;&#x76EE;&#x67B6;&#x6784;&#x53CA;&#x6846;&#x67B6;&#x5BF9;&#x6BD4;">&#x9879;&#x76EE;&#x67B6;&#x6784;&#x53CA;&#x6846;&#x67B6;&#x5BF9;&#x6BD4;</a></li>
-<li><a href="#&#x6A21;&#x5757;&#x5316;&#x5206;&#x6790;">&#x6A21;&#x5757;&#x5316;&#x5206;&#x6790;</a></li>
-<li><a href="#Less%20&#x4E0E;%20Scss">Less &#x4E0E; Scss</a></li>
-<li><a href="#&#x76F8;&#x5173;&#x6280;&#x672F;&#x6F14;&#x793A;">&#x76F8;&#x5173;&#x6280;&#x672F;&#x6F14;&#x793A;</a></li>
-</ol>
-</blockquote>
+                                <h1 id="npm&#xFF08;node-page-manage&#xFF09;">npm&#xFF08;Node Page Manage&#xFF09;</h1>
 <hr>
-<h5 id="&#x6280;&#x672F;&#x9009;&#x578B;"><a id="&#x6280;&#x672F;&#x9009;&#x578B;">&#x6280;&#x672F;&#x9009;&#x578B;</a></h5>
-<ul>
-<li><p>&#x524D;&#x7AEF;&#x4E09;&#x5251;&#x5BA2;&#xFF1A;Angular&#x3001;Vue&#x3001;React</p>
-</li>
-<li><p>UI&#x5E93;(&#x6216;&#x6846;&#x67B6;)&#xFF1A;<a href="https://ng.ant.design/docs/introduce/zh" target="_blank">ng-zorro-antd</a>&#x3001;<a href="http://ng.mobile.ant.design/#/docs/introduce/zh" target="_blank">ng-zorro-mobile</a>&#x3001;<a href="https://ionicframework.com/" target="_blank">IONIC</a>&#x3001;<a href="https://v5.getbootstrap.com/" target="_blank">Boopstrap 5.0.0-alpha1</a>&#x7B49;</p>
-</li>
-<li>UI(&#x6216;&#x4EE3;&#x7801;)&#x89C4;&#x8303;&#xFF1A;<a href="https://ant.design/docs/spec/introduce-cn" target="_blank">antd&#x89C4;&#x8303;</a>&#x3001;<a href="http://nec.netease.com/standard" target="_blank">&#x7F51;&#x6613;&#x4EE3;&#x7801;&#x89C4;&#x8303;</a></li>
-<li>&#x4E2D;&#x540E;&#x53F0;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;<a href="https://ng-alain.com/zh" target="_blank">ng-alain</a>&#x3001;<a href="https://pro.antdv.com/" target="_blank">antd-vue-pro</a></li>
-<li>&#x9879;&#x76EE;&#x7BA1;&#x7406;&#xFF1A;git&#x3001;svn</li>
-<li>&#x63A5;&#x53E3;&#x89C4;&#x8303;&#xFF1A;<a href="http://www.ruanyifeng.com/blog/2014/05/restful_api.html" target="_blank">RESTful API&#x89C4;&#x8303;</a>&#x3001;<a href="https://swagger.io/solutions/api-design/" target="_blank">swagger</a></li>
-</ul>
-<pre><code class="lang-html">&#x9644;&#xFF1A;ng-zorro-antd &#x5B98;&#x65B9;&#x7FA4;&#xFF1A;320404326
-   ng-alain &#x5B98;&#x65B9;&#x7FA4;&#xFF1A;316911865
-   &#x524D;&#x7AEF;&#x5728;&#x7EBF;&#x8C03;&#x8BD5;&#x5DE5;&#x5177;&#xFF1A;https://stackblitz.com/
-   git &#x7B80;&#x6613;&#x89C6;&#x9891;&#x6559;&#x7A0B;&#xFF1A;https://www.bilibili.com/video/BV1BE411g7SV
+<h5 id="&#x67E5;&#x770B;&#x5168;&#x5C40;&#x5B89;&#x88C5;&#x7684;&#x4F9D;&#x8D56;">&#x67E5;&#x770B;&#x5168;&#x5C40;&#x5B89;&#x88C5;&#x7684;&#x4F9D;&#x8D56;</h5>
+<pre><code class="lang-bash">npm list -g --depth 0
 </code></pre>
-<p><strong>&#x4EC0;&#x4E48;&#x662F;Swagger&#xFF1F;</strong></p>
-<p>Swagger &#x662F;&#x4E00;&#x4E2A;&#x89C4;&#x8303;&#x4E14;&#x5B8C;&#x6574;&#x7684;&#x6846;&#x67B6;&#xFF0C;&#x7528;&#x4E8E;&#x751F;&#x6210;&#x3001;&#x63CF;&#x8FF0;&#x3001;&#x8C03;&#x7528;&#x548C;&#x53EF;&#x89C6;&#x5316; RESTful &#x98CE;&#x683C;&#x7684; Web &#x670D;&#x52A1;&#x3002;</p>
-<p>Swagger &#x7684;&#x76EE;&#x6807;&#x662F;&#x5BF9; REST API &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6807;&#x51C6;&#x4E14;&#x548C;&#x8BED;&#x8A00;&#x65E0;&#x5173;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x4EBA;&#x548C;&#x8BA1;&#x7B97;&#x673A;&#x62E5;&#x6709;&#x65E0;&#x987B;&#x8BBF;&#x95EE;&#x6E90;&#x7801;&#x3001;&#x6587;&#x6863;&#x6216;&#x7F51;&#x7EDC;&#x6D41;&#x91CF;&#x76D1;&#x6D4B;&#x5C31;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x548C;&#x7406;&#x89E3;&#x670D;&#x52A1;&#x7684;&#x80FD;&#x529B;&#x3002;&#x5F53;&#x901A;&#x8FC7; Swagger &#x8FDB;&#x884C;&#x6B63;&#x786E;&#x5B9A;&#x4E49;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5E76;&#x4F7F;&#x7528;&#x6700;&#x5C11;&#x5B9E;&#x73B0;&#x903B;&#x8F91;&#x4E0E;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;&#x4E0E;&#x4E3A;&#x5E95;&#x5C42;&#x7F16;&#x7A0B;&#x6240;&#x5B9E;&#x73B0;&#x7684;&#x63A5;&#x53E3;&#x7C7B;&#x4F3C;&#xFF0C;Swagger &#x6D88;&#x9664;&#x4E86;&#x8C03;&#x7528;&#x670D;&#x52A1;&#x65F6;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x7684;&#x731C;&#x6D4B;&#x3002;</p>
-<p><strong>Swagger &#x6709;&#x4EC0;&#x4E48;&#x4F18;&#x52BF;&#xFF1F;</strong></p>
-<p>&#x652F;&#x6301; API &#x81EA;&#x52A8;&#x751F;&#x6210;&#x540C;&#x6B65;&#x7684;&#x5728;&#x7EBF;&#x6587;&#x6863;&#xFF1A;&#x4F7F;&#x7528; Swagger &#x540E;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x4EE3;&#x7801;&#x751F;&#x6210;&#x6587;&#x6863;&#xFF0C;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x624B;&#x52A8;&#x7F16;&#x5199;&#x63A5;&#x53E3;&#x6587;&#x6863;&#x4E86;&#xFF0C;&#x5BF9;&#x7A0B;&#x5E8F;&#x5458;&#x6765;&#x8BF4;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#xFF0C;&#x53EF;&#x4EE5;&#x8282;&#x7EA6;&#x5199;&#x6587;&#x6863;&#x7684;&#x65F6;&#x95F4;&#x53BB;&#x5B66;&#x4E60;&#x65B0;&#x6280;&#x672F;&#x3002;</p>
-<p>&#x63D0;&#x4F9B; Web &#x9875;&#x9762;&#x5728;&#x7EBF;&#x6D4B;&#x8BD5; API&#xFF1A;&#x5149;&#x6709;&#x6587;&#x6863;&#x8FD8;&#x4E0D;&#x591F;&#xFF0C;Swagger &#x751F;&#x6210;&#x7684;&#x6587;&#x6863;&#x8FD8;&#x652F;&#x6301;&#x5728;&#x7EBF;&#x6D4B;&#x8BD5;&#x3002;&#x53C2;&#x6570;&#x548C;&#x683C;&#x5F0F;&#x90FD;&#x5B9A;&#x597D;&#x4E86;&#xFF0C;&#x76F4;&#x63A5;&#x5728;&#x754C;&#x9762;&#x4E0A;&#x8F93;&#x5165;&#x53C2;&#x6570;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x5373;&#x53EF;&#x5728;&#x7EBF;&#x6D4B;&#x8BD5;&#x63A5;&#x53E3;&#x3002;</p>
-<hr>
-<p><a id="&#x9879;&#x76EE;&#x67B6;&#x6784;&#x53CA;&#x6846;&#x67B6;&#x5BF9;&#x6BD4;">&#x9879;&#x76EE;&#x67B6;&#x6784;&#x53CA;&#x6846;&#x67B6;&#x5BF9;&#x6BD4;</a></p>
-<blockquote>
-<p>&#x76EE;&#x524D;&#xFF1A;PC&#x7AEF; &#x4F7F;&#x7528;&#xFF1A;angular+ng-zorro-antd
-            &#x79FB;&#x52A8;&#x7AEF; &#x4F7F;&#x7528;&#xFF1A;angular+IONIC
-            &#x9759;&#x6001;&#x5355;&#x9875;&#x9762;&#x53EF;&#x4F7F;&#x7528;&#xFF1A;bootstrap</p>
-<p>&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x4E1A;&#x52A1;&#x9700;&#x6C42;&#xFF0C;&#x9009;&#x62E9;&#x76F8;&#x5E94;&#x7684;&#x6280;&#x672F;&#x6808;&#x3002;</p>
-</blockquote>
-<pre><code class="lang-html">&#x9644;&#xFF1A;&#x9759;&#x6001;&#x9879;&#x76EE;&#x53EF;&#x4F7F;&#x7528;CDN&#x52A0;&#x901F;&#x94FE;&#x63A5;&#xFF1A;https://www.bootcdn.cn/
+<h5 id="&#x955C;&#x50CF;&#x6E90;&#xFF08;&#x67E5;&#x770B;&#x8BBE;&#x7F6E;&#xFF09;">&#x955C;&#x50CF;&#x6E90;&#xFF08;&#x67E5;&#x770B;/&#x8BBE;&#x7F6E;&#xFF09;</h5>
+<pre><code class="lang-bash"># &#x67E5;&#x770B;
+npm get registry
+
+# &#x8BBE;&#x7F6E;
+npm set registry http://registry.npmjs.org    # npm&#x6E90;
+npm set registry http://registry.npm.taobao.org    # &#x6DD8;&#x5B9D;&#x6E90;
 </code></pre>
-<hr>
-<p><a id="&#x6A21;&#x5757;&#x5316;&#x5206;&#x6790;">&#x6A21;&#x5757;&#x5316;&#x5206;&#x6790;</a></p>
-<blockquote>
-<p><strong>&#x6A21;&#x5757;&#x5316;&#x5206;&#x4E3A; CMD&#x3001;AMD&#x3001;CommonJs</strong></p>
-<p>AMD &#x662F;<strong>RequireJS</strong>&#x5728;&#x63A8;&#x5E7F;&#x8FC7;&#x7A0B;&#x4E2D;<strong>&#x5BF9;&#x6A21;&#x5757;&#x5B9A;&#x4E49;&#x7684;&#x89C4;&#x8303;&#x5316;</strong>&#x4EA7;&#x51FA;&#xFF0C;&#x901A;&#x8FC7;define()&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x91CC;&#x9762;&#x5B9A;&#x4E49;&#x4E00;&#x4E9B;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x7684;&#x5305;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x4EE3;&#x8868;&#xFF1A;<strong>RequireJS</strong></p>
-<p>CMD &#x662F;<strong>SeaJS</strong>&#x5728;&#x63A8;&#x5E7F;&#x8FC7;&#x7A0B;&#x4E2D;&#x5BF9;&#x6A21;&#x5757;&#x5B9A;&#x4E49;&#x7684;&#x89C4;&#x8303;&#x5316;&#x4EA7;&#x51FA;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x540C;&#x6B65;&#x6A21;&#x5757;&#x5B9A;&#x4E49;&#xFF0C;&#x662F;SeaJS&#x7684;&#x4E00;&#x4E2A;&#x6807;&#x51C6;&#xFF0C;SeaJS&#x662F;CMD&#x6982;&#x5FF5;&#x7684;&#x4E00;&#x4E2A;&#x5B9E;&#x73B0;&#xFF0C;SeaJS&#x662F;&#x6DD8;&#x5B9D;&#x56E2;&#x961F;&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x5F00;&#x53D1;&#x7684;js&#x6846;&#x67B6;&#xFF0C;&#x4EE3;&#x8868;&#xFF1A;<strong>SeaJS</strong></p>
-<p>CommonJS &#x662F;&#x901A;&#x8FC7;<strong>module.exports&#x5B9A;</strong>&#x4E49;&#x7684;&#xFF0C;&#x5728;&#x524D;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x91CC;&#x9762;&#x5E76;&#x4E0D;&#x652F;&#x6301;module.exports&#xFF0C;&#x901A;&#x8FC7;node.js&#x540E;&#x7AEF;&#x4F7F;&#x7528;&#x7684;&#x3002;Nodejs&#x7AEF;&#x662F;&#x4F7F;&#x7528;CommonJS&#x89C4;&#x8303;&#x7684;&#xFF0C;&#x524D;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x4E00;&#x822C;&#x4F7F;&#x7528;AMD&#x3001;CMD&#x3001;ES6&#x7B49;&#x5B9A;&#x4E49;&#x6A21;&#x5757;&#x5316;&#x5F00;&#x53D1;&#xFF0C;&#x5199;&#x6CD5;&#x6709;&#xFF1A;module export &#x548C; exports.xx(&#x53C2;&#x6570;)&#x4E24;&#x79CD;&#xFF0C; &#x4EE3;&#x8868;&#xFF1A;<strong>CommonJS</strong></p>
-<p><strong>&#x6A21;&#x5757;&#x5316;&#x53CA;&#x7EC4;&#x4EF6;&#x5316;</strong></p>
-<p>&#x6A21;&#x5757;&#x5316;&#xFF08;&#x6309;&#x529F;&#x80FD;&#xFF09; -&gt;  &#x6C7D;&#x8F66;&#x7EC4;&#x88C5; = &#x8F66;&#x67B6;+&#x8F66;&#x95E8;+&#x8F66;&#x8F6E;+&#x53D1;&#x52A8;&#x673A;&#x7B49;</p>
-<p>&#x7EC4;&#x4EF6;&#x5316;&#xFF08;&#x6309;&#x6700;&#x5C0F;&#x5143;&#x90E8;&#x4EF6;&#xFF09;-&gt;  &#x8F66;&#x8F6E; = &#x6A61;&#x80F6;&#x8F6E;&#x80CE;+&#x8F6E;&#x8F74;+&#x8F6E;&#x67B6;&#x5B50;&#x7B49;</p>
-</blockquote>
-<p><a id="Less &#x4E0E; Scss">Less &#x4E0E; Scss</a></p>
-<p><a href="http://lesscss.cn/" target="_blank">Less&#x4E2D;&#x6587;&#x5B98;&#x7F51;&#xFF1A;http://lesscss.cn/</a></p>
-<blockquote>
-<p><strong>&#x7B80;&#x8FF0;</strong>&#xFF1A;</p>
-<p>Sass&#x548C;Less&#x90FD;&#x5C5E;&#x4E8E;Css&#x9884;&#x5904;&#x7406;&#x5668;&#xFF0C;Css&#x9884;&#x5904;&#x7406;&#x5668;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x79CD;&#x65B0;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x5176;&#x57FA;&#x672C;&#x601D;&#x60F3;&#x662F;&#x7528;&#x4E00;&#x79CD;&#x4E13;&#x95E8;&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#xFF0C;&#x4E3A;Css&#x589E;&#x52A0;&#x4E00;&#x4E9B;&#x7F16;&#x7A0B;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x5C06;Css&#x4F5C;&#x4E3A;&#x76EE;&#x6807;&#x751F;&#x6210;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x5F00;&#x53D1;&#x8005;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x8BED;&#x8A00;&#x8FDB;&#x884C;Css&#x7F16;&#x7801;&#x5DE5;&#x4F5C;(&#x7528;&#x4E00;&#x79CD;&#x4E13;&#x95E8;&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#xFF0C;&#x8FDB;&#x884C;Web&#x7F51;&#x9875;&#x6837;&#x5F0F;&#x8BBE;&#x8BA1;&#xFF0C;&#x518D;&#x901A;&#x8FC7;&#x7F16;&#x8BD1;&#x5668;&#x8F6C;&#x5316;&#x4E3A;&#x6B63;&#x5E38;&#x7684;Css&#x6587;&#x4EF6;&#xFF0C;&#x4EE5;&#x4F9B;&#x9879;&#x76EE;&#x4F7F;&#x7528;)&#x3002;&#x5199;&#x6CD5;&#x5927;&#x4F53;&#x76F8;&#x540C;&#x3002;</p>
-<p>&#x5176;&#x4E2D;Scss&#x5206;2&#x79CD;&#xFF1A;1.Sass&#xFF1A;&#x683C;&#x5F0F;&#x4E25;&#x8C28;&#xFF0C;&#x5199;&#x6CD5;&#x7C7B;&#x540C;python&#x3002;2.Scss&#xFF1A;&#x53EF;&#x4E0E;&#x666E;&#x901A;&#x5199;&#x6CD5;&#x5D4C;&#x5957;</p>
-<p><strong>&#x5171;&#x540C;&#x70B9;</strong>&#xFF1A;</p>
-<ul>
-<li><p>&#x6DF7;&#x5408;(Mixins):&#x5C06;&#x4E00;&#x4E2A;&#x5B9A;&#x4E49;&#x597D;&#x7684;classA&#x5F15;&#x5165;&#x5230;&#x53E6;&#x4E00;&#x4E2A;classB&#x4E2D;&#xFF0C;&#x4ECE;&#x800C;&#x7B80;&#x5355;&#x5B9E;&#x73B0;classB&#x7EE7;&#x627F;&#x4E86;classA&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#xFF1B;</p>
-</li>
-<li><p>&#x53C2;&#x6570;&#x6DF7;&#x5408;(Parametric):&#x53EF;&#x4EE5;&#x50CF;&#x51FD;&#x6570;&#x4E00;&#x6837;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x7684;class</p>
-</li>
-<li><p>&#x5D4C;&#x5957;&#x89C4;&#x5219;&#xFF1A;class&#x4E2D;&#x5D4C;&#x5957;class,&#x4ECE;&#x800C;&#x51CF;&#x5C11;&#x91CD;&#x590D;&#x7684;&#x4EE3;&#x7801;</p>
-</li>
-<li><p>&#x8FD0;&#x7B97;&#xFF1A;css&#x4E2D;&#x7684;&#x6570;&#x5B66;&#x8BA1;&#x7B97;</p>
-</li>
-<li><p>&#x989C;&#x8272;&#x529F;&#x80FD;&#xFF1A;&#x53EF;&#x4EE5;&#x7F16;&#x8F91;&#x4F60;&#x7684;&#x989C;&#x8272;</p>
-</li>
-<li><p>&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF1A;&#x6837;&#x5F0F;&#x5206;&#x7EC4;&#xFF0C;&#x4ECE;&#x800C;&#x65B9;&#x4FBF;&#x88AB;&#x8C03;&#x7528;</p>
-</li>
-<li><p>&#x4F5C;&#x7528;&#x57DF;&#xFF1A;&#x5C40;&#x90E8;&#x4FEE;&#x6539;&#x6837;&#x5F0F;</p>
-</li>
-<li><p>JavaScript&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;&#x5728;css&#x6837;&#x5F0F;&#x4E2D;&#x4F7F;&#x7528;javaScript&#x8868;&#x8FBE;&#x5F0F;&#x8D4B;&#x503C;</p>
-</li>
-</ul>
-</blockquote>
-<pre><code class="lang-html">&#x9644;&#xFF1A;css&#x3001;less&#x3001;scss&#x76F8;&#x4E92;&#x8F6C;&#x6362;&#x5DE5;&#x5177;&#xFF1A;http://koala-app.com/
+<h5 id="&#x5B89;&#x88C5;pkg">&#x5B89;&#x88C5;pkg</h5>
+<pre><code class="lang-bash">npm install (with no args, in package dir)
+npm install [&lt;@scope&gt;/]&lt;pkg&gt;
+npm install [&lt;@scope&gt;/]&lt;pkg&gt;@&lt;tag&gt;
+npm install [&lt;@scope&gt;/]&lt;pkg&gt;@&lt;version&gt;
+npm install [&lt;@scope&gt;/]&lt;pkg&gt;@&lt;version range&gt;
+npm install &lt;alias&gt;@npm:&lt;name&gt;
+npm install &lt;folder&gt;
+npm install &lt;tarball file&gt;
+npm install &lt;tarball url&gt;
+npm install &lt;git:// url&gt;
+npm install &lt;github username&gt;/&lt;github project&gt;
+
+aliases: i, isntall, add
+common options: [--save-prod|--save-dev|--save-optional] [--save-exact] [--no-save]
+</code></pre>
+<h5 id="&#x5378;&#x8F7D;">&#x5378;&#x8F7D;</h5>
+<pre><code class="lang-bash">npm uninstall [&lt;@scope&gt;/]&lt;pkg&gt;[@&lt;version&gt;]... [--save-prod|--save-dev|--save-optional] [--no-save]
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 951450262@qq.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2022-03-30 13:26:32
+2022-05-04 16:16:34
 </span></footer>
                                 
                                 </section>
@@ -887,10 +836,10 @@
 
             
                 
-                <a href="webcomponent及angular的变化检测机制.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: webcomponent及angular的变化检测机制">
-                    <i class="fa fa-angle-left"></i>
-                </a>
                 
+                <a href="nvm.html" class="navigation navigation-next navigation-unique" aria-label="Next page: nvm">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -899,7 +848,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"技术选型及代码规范","level":"1.12.3","depth":2,"next":{"title":"实用工具","level":"1.13","depth":1,"ref":"","articles":[{"title":"工具","level":"1.13.1","depth":2,"path":"实用工具/工具.md","ref":"实用工具/工具.md","articles":[]}]},"previous":{"title":"webcomponent及angular的变化检测机制","level":"1.12.2","depth":2,"path":"分享/webcomponent及angular的变化检测机制.md","ref":"分享/webcomponent及angular的变化检测机制.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","expandable-chapters","theme-comscore","tbfed-pagefooter","-highlight","prism-themes","code","expandable-chapters-small","github","my-toolbar","hide-element","livereload"],"root":"./doc","styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 951450262@qq.com 2021","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/MrCodeFront/my-gitbook"},"livereload":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"expandable-chapters-small":{},"my-toolbar":{"buttons":[{"label":"下载PDF","icon":"fa fa-file-pdf-o","url":"http://localhost:4000/book.pdf","position":"left","text":"下载PDF","target":"_blank"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"lkf","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CodeFront Document","language":"zh-hans","gitbook":"3.2.3","description":""},"file":{"path":"分享/技术选型及代码规范.md","mtime":"2022-03-30T05:26:32.059Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-04T08:34:23.825Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"npm","level":"1.9.1","depth":2,"next":{"title":"nvm","level":"1.9.2","depth":2,"path":"node包管理器/nvm.md","ref":"node包管理器/nvm.md","articles":[]},"previous":{"title":"node包管理器","level":"1.9","depth":1,"ref":"","articles":[{"title":"npm","level":"1.9.1","depth":2,"path":"node包管理器/npm.md","ref":"node包管理器/npm.md","articles":[]},{"title":"nvm","level":"1.9.2","depth":2,"path":"node包管理器/nvm.md","ref":"node包管理器/nvm.md","articles":[]},{"title":"pnpm","level":"1.9.3","depth":2,"path":"node包管理器/pnpm.md","ref":"node包管理器/pnpm.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","expandable-chapters","theme-comscore","tbfed-pagefooter","-highlight","prism-themes","code","expandable-chapters-small","github","my-toolbar","hide-element","livereload"],"root":"./doc","styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 951450262@qq.com 2021","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/MrCodeFront/my-gitbook"},"livereload":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"expandable-chapters-small":{},"my-toolbar":{"buttons":[{"label":"下载PDF","icon":"fa fa-file-pdf-o","url":"http://localhost:4000/book.pdf","position":"left","text":"下载PDF","target":"_blank"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"lkf","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CodeFront Document","language":"zh-hans","gitbook":"3.2.3","description":""},"file":{"path":"node包管理器/npm.md","mtime":"2022-05-04T08:16:34.197Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-04T08:34:23.825Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

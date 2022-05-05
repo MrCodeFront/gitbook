@@ -38,7 +38,7 @@ flush privileges;
 
 ```shell
 1.右击计算机 - 管理 - 服务和应用程序 - 服务
-2.打开 cmd
+2.打开 cmd（管理员身份）
   开启：net start [mysql名称]
   停止：net stop [mysql名称]
 ```
@@ -202,6 +202,12 @@ SELECT 查询列表 FROM 表名 WHERE 列名 LIKE '__n_l%';
 SELECT 查询列表 FROM 表名 WHERE 列名 LIKE '_\_%';
 或者
 SELECT 查询列表 FROM 表名 WHERE 列名 LIKE '_$_%' ESCAPE '$';
+```
+
+##### IN
+
+```bash
+SELECT 查询列表 FROM 表名 WHERE 列名 IN (值1,值2,...);
 ```
 
 ##### ISNULL、IS NOT NULL

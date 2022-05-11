@@ -247,7 +247,7 @@ SELECT 列名 FROM 表名 WHERE 列名 <=> 值;
 #### 函数
 
 ```SQL
-概念：将一组逻辑语句封装子啊方法体中，对外暴露方法名。
+概念：将一组逻辑语句封装在方法体中，对外暴露方法名。
 好处：
 	1.隐藏了实现细节
 	2.提高代码的重用性
@@ -317,7 +317,7 @@ SELECT CEIL(数值);
 SELECT FLOOR(数值);
 
 -- TRUNCATE 截断
-SELECT TRUNCATE(数值,截断位数);
+SELECT TRUNCATE(小数,截断位数);
 
 -- MOD 取余
 SELECT MOD(被除数,除数);
@@ -328,13 +328,13 @@ SELECT MOD(被除数,除数);
 ```sql
 %Y：年（4位）
 %y：年（2位）
-%m：月（2位）
-%c：月（1位）
-%d：日（2位）
+%m：月（2位）(01,02...11,12)
+%c：月（1位）(1,2...11,12)
+%d：日（2位）(01,02...)
 %H：小时（24小时制）
 %h：小时（12小时制）
-%i：分钟
-%s：秒
+%i：分钟(01,02...)
+%s：秒(01,02...)
 
 -- 返回当前系统日期+时间
 SELECT NOW();
@@ -375,6 +375,23 @@ SELECT USER();		// 查看当前库的用户
 SELECT IF(10>5,'大','小');
 
 -- CASE 函数
+/* 
+用法一：(类同 switch)
+case 要判断的字段或表达式
+when 常量1 then 要显示的值1或语句1;
+when 常量2 then 要显示的值2或语句2;
+...
+else 要显示的值n或语句n;
+end
+
+用法二：（类同 if）
+case
+when 条件1 then 要显示的值1或语句1;
+when 条件2 then 要显示的值2或语句2;
+...
+else 要显示的值n或语句n;
+end
+*/
 SELECT salary,department_id,
 CASE department_id
 	WHEN 30 THEN salary*1.1
@@ -391,6 +408,42 @@ CASE
 	ELSE 'D'
 END AS 工资等级
 FROM employees;
+```
+
+##### 分组函数
+
+```sql
+/*
+功能：用作统计使用，又称为聚合函数或统计函数或组函数
+分类：
+sum 求和、avg 平均值、max 最大值、min 最小值、count 计算个数
+特点：
+1、sum、avg 一般用于处理数值型
+   max、min、count 可以处理任何类型
+2、以上文组函数都忽略 null 值
+3、可以和 DISTINCT 搭配实现去重
+4、count 函数单独介绍
+一般使用count(*)用作统计行数
+5、和分组函数一同查询的字段要求是 group by 后的字段
+*/
+SELECT SUM(字段名) FROM 表名;
+SELECT AVG(字段名) FROM 表名;
+SELECT MIN(字段名) FROM 表名;
+SELECT MAX(字段名) FROM 表名;
+SELECT COUNT(字段名) FROM 表名;
+
+# 配合 DISTINCT 实现去重
+SELECT SUM(DISTINCT 字段名) FROM 表名;
+SELECT COUNT(DISTINCT 字段名) FROM 表名;
+
+# count 函数的详细介绍
+# 当前行任意一个属性部位null，则统计当前行，以下效果一样
+SELECT COUNT(*) FROM 表名;
+SELECT COUNT(1) FROM 表名;
+SELECT COUNT(2) FROM 表名;
+# 效率
+MYISAM 存储引擎下，COUNT(*) 的效率高
+INNODB 存储引擎下，COUNT(*) 和 COUNT(1) 的效果差不多，比 COUNT(字段) 要高一些
 ```
 
 

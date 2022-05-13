@@ -21,7 +21,8 @@
     "expandable-chapters-small",
     "github",
     "my-toolbar",
-    "hide-element"
+    "hide-element",
+	"accordion"
   ],
   "pluginsConfig": {
     "tbfed-pagefooter": {

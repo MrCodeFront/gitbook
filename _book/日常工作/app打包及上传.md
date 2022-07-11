@@ -44,6 +44,15 @@ xml：cp_version.xml
 打包环境：caipian-build-env
 ```
 
+##### 裁片超市(天守)
+
+```
+app对应id：58
+文件名：01-cutting-supermarket.apk
+xml：cp_TianShou_version.xml
+打包环境：caipian-build-env
+```
+
 ##### 扫码app（scan-app）
 
 ```

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>插件 · CodeFront Document</title>
+        <title>cordova · CodeFront Document</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -67,8 +67,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="插件.html" />
     
-    <link rel="prev" href="cordova.html" />
     
 
     </head>
@@ -350,7 +350,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="cordova.html">
+        <li class="chapter active" data-level="1.5.1" data-path="cordova.html">
             
                 <a href="cordova.html">
             
@@ -363,7 +363,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.2" data-path="插件.html">
+        <li class="chapter " data-level="1.5.2" data-path="插件.html">
             
                 <a href="插件.html">
             
@@ -880,7 +880,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >插件</a>
+        <a href=".." >cordova</a>
     </h1>
 </div>
 
@@ -895,12 +895,39 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h5 id="app&#x81EA;&#x52A8;&#x66F4;&#x65B0;">app&#x81EA;&#x52A8;&#x66F4;&#x65B0;</h5>
-<pre><code class="lang-bash">npm install @ionic-native/device @ionic-native/app-version
-cordova plugin add cordova-plugin-appversion cordova-plugin-app-update
+                                <h1 id="cordova">CORDOVA</h1>
+<hr>
+<p>&#x5B98;&#x7F51;&#xFF1A;<a href="https://cordova.apache.org/" target="_blank">https://cordova.apache.org/</a></p>
+<h5 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h5>
+<pre><code class="lang-bash">npm install -g cordova
+</code></pre>
+<h5 id="&#x521B;&#x5EFA;&#x9879;&#x76EE;">&#x521B;&#x5EFA;&#x9879;&#x76EE;</h5>
+<pre><code class="lang-bash">cordova create [&#x9879;&#x76EE;&#x540D;]
+</code></pre>
+<h5 id="&#x5E73;&#x53F0;browserandroidios">&#x5E73;&#x53F0;(browser/android/ios)</h5>
+<pre><code class="lang-bash"># &#x67E5;&#x770B;&#x5E73;&#x53F0;
+cordova platform ls
+# &#x5B89;&#x88C5;&#x5E73;&#x53F0;
+cordova platform add [&#x5E73;&#x53F0;&#x540D;]
+# &#x79FB;&#x9664;&#x5E73;&#x53F0;
+cordova platform rm [&#x5E73;&#x53F0;&#x540D;]
+</code></pre>
+<h5 id="&#x8FD0;&#x884C;">&#x8FD0;&#x884C;</h5>
+<pre><code class="lang-bash">cordova run [&#x5E73;&#x53F0;&#x540D;]
+</code></pre>
+<h5 id="&#x63D2;&#x4EF6;">&#x63D2;&#x4EF6;</h5>
+<pre><code class="lang-bash"># &#x67E5;&#x770B;&#x63D2;&#x4EF6;
+cordova plugin ls
+# &#x6DFB;&#x52A0;&#x63D2;&#x4EF6;
+cordova plugin add [&#x63D2;&#x4EF6;&#x540D;]
+# &#x79FB;&#x9664;&#x63D2;&#x4EF6;
+cordova plugin rm [&#x63D2;&#x4EF6;&#x540D;]
+</code></pre>
+<h5 id="&#x6253;&#x5305;">&#x6253;&#x5305;</h5>
+<pre><code class="lang-bash">cordova build android/ios
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 951450262@qq.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2022-05-04 16:51:52
+2022-06-07 13:53:09
 </span></footer>
                                 
                                 </section>
@@ -928,10 +955,10 @@ cordova plugin add cordova-plugin-appversion cordova-plugin-app-update
 
             
                 
-                <a href="cordova.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: cordova">
-                    <i class="fa fa-angle-left"></i>
-                </a>
                 
+                <a href="插件.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 插件">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -940,7 +967,7 @@ cordova plugin add cordova-plugin-appversion cordova-plugin-app-update
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"插件","level":"1.5.2","depth":2,"next":{"title":"git","level":"1.6","depth":1,"ref":"","articles":[{"title":"常用命令","level":"1.6.1","depth":2,"path":"git/常用命令.md","ref":"git/常用命令.md","articles":[]},{"title":"里程碑","level":"1.6.2","depth":2,"path":"git/里程碑.md","ref":"git/里程碑.md","articles":[]}]},"previous":{"title":"cordova","level":"1.5.1","depth":2,"path":"cordova/cordova.md","ref":"cordova/cordova.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","expandable-chapters","theme-comscore","tbfed-pagefooter","-highlight","prism-themes","code","expandable-chapters-small","github","my-toolbar","hide-element","accordion","livereload"],"root":"./doc","styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 951450262@qq.com 2021","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/MrCodeFront/my-gitbook"},"livereload":{},"accordion":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"expandable-chapters-small":{},"my-toolbar":{"buttons":[{"label":"下载PDF","icon":"fa fa-file-pdf-o","url":"http://localhost:4000/book.pdf","position":"left","text":"下载PDF","target":"_blank"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"lkf","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CodeFront Document","language":"zh-hans","gitbook":"3.2.3","description":""},"file":{"path":"cordova/插件.md","mtime":"2022-05-04T08:51:52.684Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-11T02:34:43.787Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"cordova","level":"1.5.1","depth":2,"next":{"title":"插件","level":"1.5.2","depth":2,"path":"cordova/插件.md","ref":"cordova/插件.md","articles":[]},"previous":{"title":"cordova","level":"1.5","depth":1,"ref":"","articles":[{"title":"cordova","level":"1.5.1","depth":2,"path":"cordova/cordova.md","ref":"cordova/cordova.md","articles":[]},{"title":"插件","level":"1.5.2","depth":2,"path":"cordova/插件.md","ref":"cordova/插件.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","expandable-chapters","theme-comscore","tbfed-pagefooter","-highlight","prism-themes","code","expandable-chapters-small","github","my-toolbar","hide-element","accordion","livereload"],"root":"./doc","styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 951450262@qq.com 2021","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/MrCodeFront/my-gitbook"},"livereload":{},"accordion":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"expandable-chapters-small":{},"my-toolbar":{"buttons":[{"label":"下载PDF","icon":"fa fa-file-pdf-o","url":"http://localhost:4000/book.pdf","position":"left","text":"下载PDF","target":"_blank"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"lkf","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CodeFront Document","language":"zh-hans","gitbook":"3.2.3","description":""},"file":{"path":"cordova/cordova.md","mtime":"2022-06-07T05:53:09.565Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-11T02:34:43.787Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

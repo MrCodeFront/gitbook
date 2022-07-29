@@ -32,7 +32,7 @@
 * [javascript]()
   * [css文件转行内样式](javascript\css文件转行内样式.md)
   * [DOM对象属性、鼠标事件](javascript\DOM对象属性、鼠标事件.md)
-  * [excel导出](javascript\excel导出.txt)
+  * [excel导出](javascript\excel导出.md)
   * [pdf文本获取](javascript\pdf文本获取.md)
   * [前端实用方法](javascript\前端实用方法.md)
   * [实用工具](javascript\实用工具.md)

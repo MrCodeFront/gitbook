@@ -1,4 +1,6 @@
-##### css文件转行内样式（打印机使用）
+### css文件转行内样式（打印机使用）
+
+---
 
 https://github.com/jonkemp/inline-css
 
@@ -8,6 +10,4 @@ var html = ``;
 inlineCss(html,{url:'/'}).then(function(html) { console.log(html); });
 ```
 
-##### GitLab 使用
-
-[GitLab - 芒果文档 (imangodoc.com)](https://www.imangodoc.com/27895.html)
+##### 

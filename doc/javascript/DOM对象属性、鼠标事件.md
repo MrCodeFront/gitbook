@@ -1,4 +1,6 @@
-# DOM 对象属性
+### DOM 对象属性
+
+---
 
 ##### clientWidth、clientHeight
 

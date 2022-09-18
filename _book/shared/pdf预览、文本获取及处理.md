@@ -24,7 +24,7 @@ pdf路径使用 encodeURIComponent 进行编码。encodeURIComponent('https://ww
 
 最终效果：[https://mozilla.github.io/pdf.js/web/viewer.html?file=https%3A%2F%2Fwww.gjtool.cn%2Fpdfh5%2Fgit.pdf)](https://mozilla.github.io/pdf.js/web/viewer.html?file=https%3A%2F%2Fwww.gjtool.cn%2Fpdfh5%2Fgit.pdf)
 
-![](http://markdown.rossai.cn/data/image/2022/09/19/74827_qiqp_7228.png)
+![pdf预览效果.png (1246×1046) (gitee.com)](https://gitee.com/codefront/gitbook/raw/master/public/pdf预览效果.png)
 
 ---
 

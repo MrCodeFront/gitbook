@@ -24,7 +24,7 @@ pdf路径使用 encodeURIComponent 进行编码。encodeURIComponent('https://ww
 
 最终效果：[https://mozilla.github.io/pdf.js/web/viewer.html?file=https%3A%2F%2Fwww.gjtool.cn%2Fpdfh5%2Fgit.pdf)](https://mozilla.github.io/pdf.js/web/viewer.html?file=https%3A%2F%2Fwww.gjtool.cn%2Fpdfh5%2Fgit.pdf)
 
-![pdf预览效果.png (1246×1046) (gitee.com)](https://gitee.com/codefront/gitbook/raw/master/public/pdf预览效果.png)
+![https://gitee.com/codefront/gitbook/raw/master/public/pdf预览效果.png](https://gitee.com/codefront/gitbook/raw/master/public/pdf预览效果.png)
 
 ---
 
@@ -66,19 +66,22 @@ getText(pdfUrl).then((res) => {
 });
 ```
 
-<img src="http://markdown.rossai.cn/data/image/2022/09/19/74984_yix3_2054.png"  />
+![https://gitee.com/codefront/gitbook/raw/master/public/pdf%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E7%BB%93%E6%9E%9C.png](https://gitee.com/codefront/gitbook/raw/master/public/pdf%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E7%BB%93%E6%9E%9C.png)
 
 ---
 
 ##### 数据提取及处理
 
 需处理的文件：
+![https://gitee.com/codefront/gitbook/raw/master/public/pdf1.png](https://gitee.com/codefront/gitbook/raw/master/public/pdf1.png)
 
-![](http://markdown.rossai.cn/data/image/2022/09/19/76002_seum_6730.png)
-![](http://markdown.rossai.cn/data/image/2022/09/19/76002_rdeo_4025.png)
-![](http://markdown.rossai.cn/data/image/2022/09/19/76002_bkh7_4771.png)
-![](http://markdown.rossai.cn/data/image/2022/09/19/76002_tde2_3597.png)
-![](http://markdown.rossai.cn/data/image/2022/09/19/76003_eqoo_2390.png)
+![https://gitee.com/codefront/gitbook/raw/master/public/pdf1.png](https://gitee.com/codefront/gitbook/raw/master/public/pdf2.png)
+
+![https://gitee.com/codefront/gitbook/raw/master/public/pdf1.png](https://gitee.com/codefront/gitbook/raw/master/public/pdf3.png)
+
+![https://gitee.com/codefront/gitbook/raw/master/public/pdf1.png](https://gitee.com/codefront/gitbook/raw/master/public/pdf4.png)
+
+![https://gitee.com/codefront/gitbook/raw/master/public/pdf1.png](https://gitee.com/codefront/gitbook/raw/master/public/pdf5.png)
 
 处理方法：
 

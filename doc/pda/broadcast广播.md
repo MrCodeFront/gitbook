@@ -96,6 +96,34 @@ unregisterReceiver(mScanDataReceiver);
 };
 ```
 
+##### yfd
+
+```java
+//扫描
+//注册广播
+IntentFilter yfdScanDataIntentFilter = new IntentFilter();
+yfdScanDataIntentFilter.addAction("android.intent.ACTION_DECODE_DATA");
+registerReceiver(yfdScanDataReceiver, yfdScanDataIntentFilter);
+
+//注销广播
+unregisterReceiver(yfdScanDataIntentFilter);
+
+ //数据接收
+ private BroadcastReceiver yfdScanDataReceiver = new BroadcastReceiver() {
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        // TODO Auto-generated method stub
+        String action = intent.getAction();
+        if (action.equals("ACTION_BAR_SCAN")) {
+            String str = intent.getStringExtra("barcode_string"); // str : barcode
+			appView.loadUrl("javascript:Scan.ScanBar('"+str+"',0)");
+        }
+    }
+};
+```
+
+
+
 mianActivity中添加
 
 ```java
@@ -193,5 +221,14 @@ public void onDestroy() {
 }
 ```
 
+ 
 
+旧的广播事件及获取键：
 
+扫码action：android.scanservice.action.UPLOAD_BARCODE_DATA
+
+接收键名：barcode
+
+刷卡action：android.rfid.FUN_KEY
+
+接收键名：data

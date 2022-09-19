@@ -4,6 +4,13 @@
 
 官网地址：[https://www.pnpm.cn/](https://www.pnpm.cn/)
 
+注：请使用@6版本，@7版本全局添加命令异常
+
+```bash
+npm install -g pnpm@6
+pnpm add -g [package]
+```
+
 ##### 节省磁盘空间并提升安装速度
 
 ![https://www.pnpm.cn/assets/images/cafs-illustration-7be6bd97e43ba11a031b099869321deb.jpg](https://www.pnpm.cn/assets/images/cafs-illustration-7be6bd97e43ba11a031b099869321deb.jpg)

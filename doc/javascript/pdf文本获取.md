@@ -4,6 +4,8 @@
 
 参考：https://qa.1r1g.com/sf/ask/2844518561/
 
+work工作区配置：https://www.aciuz.com/tech/PDF-js-workerSrc.html
+
 注：pdf文件必须存放在服务器上，不能获取file://协议文件，会提示跨域。
 
 ```js

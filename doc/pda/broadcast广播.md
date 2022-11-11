@@ -159,6 +159,13 @@ public void onCreate(Bundle savedInstanceState)
     IntentFilter topLfIntentFilter = new IntentFilter();
     topLfIntentFilter.addAction("com.android.server.scannerservice.broadcast2");
     registerReceiver(topLfDataReceiver, topLfIntentFilter);
+  
+  	IntentFilter iDataScanIntentFilter = new IntentFilter();
+    iDataScanIntentFilter.addAction("android.intent.action.SCANRESULT");
+    registerReceiver(iDataScanDataReceiver, iDataScanIntentFilter);
+    IntentFilter iDataLfIntentFilter = new IntentFilter();
+    iDataLfIntentFilter.addAction("com.idata.uhfdata");
+    registerReceiver(iDataLfDataReceiver, iDataLfIntentFilter);
 
     // Set by <content src="index.html" /> in config.xml
     loadUrl(launchUrl);
@@ -188,6 +195,8 @@ private BroadcastReceiver mLfDataReceiver = new BroadcastReceiver() {
       }
     }
 };
+
+// 高频枪
 private BroadcastReceiver topScanDataReceiver = new BroadcastReceiver() {
   @Override
   public void onReceive(Context context, Intent intent) {
@@ -211,13 +220,39 @@ private BroadcastReceiver topLfDataReceiver = new BroadcastReceiver() {
   }
 };
 
+// iData
+private BroadcastReceiver iDataScanDataReceiver = new BroadcastReceiver() {
+  @Override
+  public void onReceive(Context context, Intent intent) {
+    // TODO Auto-generated method stub
+    String action = intent.getAction();
+    if (action.equals("android.intent.action.SCANRESULT")) {
+      String str = intent.getStringExtra("value");
+      appView.loadUrl("javascript:Scan.ScanBar('"+str+"',0)");
+    }
+  }
+};
+private BroadcastReceiver iDataLfDataReceiver = new BroadcastReceiver() {
+  @Override
+  public void onReceive(Context context, Intent intent) {
+    // TODO Auto-generated method stub
+    String action = intent.getAction();
+    if (action.equals("com.idata.uhfdata")) {
+      String str = intent.getStringExtra("value");
+      appView.loadUrl("javascript:Scan.ScanBar('"+str+"',1)");
+    }
+  }
+};
+
 @Override
 public void onDestroy() {
     //注销广播
     unregisterReceiver(mScanDataReceiver);
     unregisterReceiver(mLfDataReceiver);
-    unregisterReceiver(mLfDataReceiver);
-    unregisterReceiver(mLfDataReceiver);
+    unregisterReceiver(topScanDataReceiver);
+    unregisterReceiver(topLfDataReceiver);
+    unregisterReceiver(iDataScanDataReceiver);
+    unregisterReceiver(iDataLfDataReceiver);
 }
 ```
 

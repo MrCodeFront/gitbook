@@ -61,6 +61,7 @@
   * [ng-alain](shared\ng-alain.md)
   * [pdf预览、文本获取及处理](shared\pdf预览、文本获取及处理.md)
   * [webcomponent及angular的变化检测机制](shared\webcomponent及angular的变化检测机制.md)
+  * [内嵌视图与宿主视图](shared\内嵌视图与宿主视图.md)
   * [技术选型及代码规范](shared\技术选型及代码规范.md)
 * [typescript]()
   * [进阶及高级用法](typescript\进阶及高级用法.md)

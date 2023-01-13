@@ -11,6 +11,10 @@ https://juejin.cn/post/6844903927104667662**
 **https://www.cnblogs.com/dolphinX/p/4381855.html**
 **https://juejin.cn/post/6844903848511799303**
 
+视频：
+
+https://www.bilibili.com/video/BV18s411E7Tj/?spm_id_from=333.337.search-card.all.click&vd_source=1390a41caddc0c842b1b8449237f0024
+
 
 
 ##### 模块化起源
@@ -316,3 +320,63 @@ UMD，全称 Universal Module Definition，即通用模块规范。
 
 前两个都不存在，则将模块公开到全局（window 或 global）；
 
+##### 全局对象挂载属性
+
+```text
+(function(root, factory) {
+    console.log('没有模块环境，直接挂载在全局对象上')
+    console.log(factory())
+    root.umdModule = factory();
+}(this, function() {
+    return {
+        name: '我是一个umd模块'
+    }
+}))
+```
+
+我们把factory写成一个匿名函数，利用IIFE（立即执行函数）去执行工厂函数，返回的对象赋值给root.umdModule，这里的root就是指向全局对象this，其值可能是window或者global，视运行环境而定。
+
+##### 兼容AMD环境
+
+```text
+(function(root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        // 如果环境中有define函数，并且define函数具备amd属性，则可以判断当前环境满足AMD规范
+        console.log('是AMD模块规范，如require.js')
+        define(factory)
+    } else {
+        console.log('没有模块环境，直接挂载在全局对象上')
+        root.umdModule = factory();
+    }
+}(this, function() {
+    return {
+        name: '我是一个umd模块'
+    }
+}))
+```
+
+##### 兼容commonJs和CMD
+
+```text
+(function(root, factory) {
+  if (typeof module === 'object' && typeof module.exports === 'object') {
+      console.log('是commonjs模块规范，nodejs环境')
+      module.exports = factory();
+  } else if (typeof define === 'function' && define.amd) {
+      console.log('是AMD模块规范，如require.js')
+      define(factory)
+  } else if (typeof define === 'function' && define.cmd) {
+      console.log('是CMD模块规范，如sea.js')
+      define(function(require, exports, module) {
+          module.exports = factory()
+      })
+  } else {
+      console.log('没有模块环境，直接挂载在全局对象上')
+      root.umdModule = factory();
+  }
+}(this, function() {
+  return {
+      name: '我是一个umd模块'
+  }
+}))
+```

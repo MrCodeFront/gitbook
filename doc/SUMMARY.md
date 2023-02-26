@@ -51,6 +51,8 @@
   * [特效](js特效\特效.md)
 * [mysql]()
   * [mysql学习](mysql\mysql学习.md)
+* [nginx]()
+  * [nginx学习](nginx\nginx学习.md)
 * [node package manage]()
   * [npm](node package manage\npm.md)
   * [nvm](node package manage\nvm.md)

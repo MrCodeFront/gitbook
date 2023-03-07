@@ -1,4 +1,4 @@
-### PicGO安装与配置SMMS图床
+## PicGO安装与配置SMMS图床
 
 ---
 

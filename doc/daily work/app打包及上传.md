@@ -1,3 +1,5 @@
+参考：http://markdown.rossai.cn/r/jdrfucjix4ev0nslep0k
+
 ##### nestapi.rossai.cn/rossapp	// 获取所有app应用信息
 
 ##### nestapi.rossai.cn/rossapp	// 添加新应用
@@ -31,6 +33,7 @@ app_logo_addr
 
 ```
 站点：cloudpf.weunit.cn
+用户名：www-data
 密码：Ross_ftp
 文件路径：/mnt/nfs-020/yly_docker/www/public/app_download/apk
 ```

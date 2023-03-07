@@ -24,3 +24,33 @@ ionic start 项目名称 super --type=ionic-angular
 ionic start 项目名称 blank --type=ionic1
 ```
 
+##### 路由返回并销毁页面
+
+```typescript
+import { NavController } from '@ionic/angular';
+
+constructor(){
+    public navController: NavController,
+}
+    
+/** 返回 */
+back() {
+	this.navController.navigateBack('home');
+}
+```
+
+```html
+<ion-button color="light" (click)="back()">
+	<ion-icon name="chevron-back"></ion-icon>
+</ion-button>
+```
+
+##### 页面创建
+
+```typescript
+// 非app路径下，无法生成module且无法合并到指定的module
+ionic g page 页面路径 -m app
+// app路径下，自动创建module
+ionic g page 页面路径
+```
+

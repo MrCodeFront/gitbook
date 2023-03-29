@@ -383,7 +383,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../antd/表格勾选.html">
+        <li class="chapter " data-level="1.4.3" data-path="../antd/菜单.html">
+            
+                <a href="../antd/菜单.html">
+            
+                    
+                    菜单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../antd/表格勾选.html">
             
                 <a href="../antd/表格勾选.html">
             
@@ -460,7 +473,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../css/常见问题.html">
+        <li class="chapter " data-level="1.6.1" data-path="../css/工具.html">
+            
+                <a href="../css/工具.html">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../css/常见问题.html">
             
                 <a href="../css/常见问题.html">
             
@@ -757,12 +783,38 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.6" data-path="../javascript/粘贴板.html">
+        <li class="chapter " data-level="1.10.6" data-path="../javascript/浅拷贝与深拷贝.html">
+            
+                <a href="../javascript/浅拷贝与深拷贝.html">
+            
+                    
+                    浅拷贝与深拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../javascript/粘贴板.html">
             
                 <a href="../javascript/粘贴板.html">
             
                     
                     粘贴板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../javascript/页面渲染性能优化.html">
+            
+                <a href="../javascript/页面渲染性能优化.html">
+            
+                    
+                    页面渲染性能优化
             
                 </a>
             
@@ -1298,7 +1350,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.20.1" data-path="../typescript/进阶及高级用法.html">
+        <li class="chapter " data-level="1.20.1" data-path="../typescript/装饰器.html">
+            
+                <a href="../typescript/装饰器.html">
+            
+                    
+                    装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.2" data-path="../typescript/进阶及高级用法.html">
             
                 <a href="../typescript/进阶及高级用法.html">
             
@@ -1517,7 +1582,7 @@ git config --local --list # &#x67E5;&#x770B;&#x672C;&#x5730;&#x4ED3;&#x5E93;&#x9
 git branch -r &#x67E5;&#x770B;&#x8FDC;&#x7A0B;&#x5206;&#x652F;
 git branch    &#x67E5;&#x770B;&#x672C;&#x5730;&#x5206;&#x652F;
 </code></pre>
-<h5 id="&#x62C9;&#x53BB;&#x6240;&#x6709;&#x5206;&#x652F;">&#x62C9;&#x53BB;&#x6240;&#x6709;&#x5206;&#x652F;</h5>
+<h5 id="&#x62C9;&#x53D6;&#x6240;&#x6709;&#x5206;&#x652F;">&#x62C9;&#x53D6;&#x6240;&#x6709;&#x5206;&#x652F;</h5>
 <pre><code class="lang-bash">git branch -r | grep -v &apos;\-&gt;&apos; | while read remote; do git branch --track &quot;${remote#origin/}&quot; &quot;$remote&quot;; done
 </code></pre>
 <h5 id="&#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x65F6;&#x95F4;">&#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x65F6;&#x95F4;</h5>
@@ -1567,6 +1632,9 @@ git log --pretty=format:&quot;%an %ae %ad %cn %ce %cd %cr %s&quot;
 <pre><code class="lang-bash">git reset --soft: &#x5C06;&#x5206;&#x652F;&#x56DE;&#x9000;&#x5230;&#x6307;&#x5B9A;&#x63D0;&#x4EA4;&#xFF0C;&#x5DE5;&#x4F5C;&#x533A;&#x7EF4;&#x6301;&#x73B0;&#x72B6;&#x4E0D;&#x53D8;,&#x6682;&#x5B58;&#x533A;&#x4F1A;&#x5728;&#x73B0;&#x6709;&#x57FA;&#x7840;&#x4E0A;&#x589E;&#x52A0;&#x8BE5;commit&#x4E4B;&#x540E;&#x7684;&#x63D0;&#x4EA4;&#x3002;
 git reset --mixed: &#xFF08;&#x9ED8;&#x8BA4;&#x64CD;&#x4F5C;&#xFF09;&#x5C06;&#x5206;&#x652F;&#x56DE;&#x9000;&#x5230;&#x6307;&#x5B9A;&#x63D0;&#x4EA4;&#xFF0C;&#x6682;&#x5B58;&#x533A;&#x4E5F;&#x88AB;&#x540C;&#x6B65;&#x4E3A;&#x8BE5;&#x6307;&#x5B9A;&#x63D0;&#x4EA4;&#xFF0C;&#x5DE5;&#x4F5C;&#x533A;&#x4FDD;&#x6301;&#x4E0D;&#x53D8;&#x3002;
 git reset --hard: &#x5C06;&#x5206;&#x652F;&#x56DE;&#x9000;&#x5230;&#x6307;&#x5B9A;&#x5206;&#x652F;&#xFF0C;&#x6682;&#x5B58;&#x533A;&#x548C;&#x5DE5;&#x4F5C;&#x533A;&#x90FD;&#x4F1A;&#x88AB;&#x540C;&#x6B65;&#x4E3A;&#x8BE5;&#x6307;&#x5B9A;&#x7684;&#x63D0;&#x4EA4;&#x3002;
+</code></pre>
+<h5 id="&#x5408;&#x5E76;&#x6307;&#x5B9A;&#x7684;&#x63D0;&#x4EA4;&#x5185;&#x5BB9;">&#x5408;&#x5E76;&#x6307;&#x5B9A;&#x7684;&#x63D0;&#x4EA4;&#x5185;&#x5BB9;</h5>
+<pre><code class="lang-bash">git cherry-pick [commitid] ... # &#x53EF;&#x5408;&#x5E76;&#x591A;&#x4E2A;&#x63D0;&#x4EA4;&#x7684;id
 </code></pre>
 <h5 id="&#x62C9;&#x53D6;&#x8FDC;&#x7A0B;&#x6307;&#x5B9A;&#x5206;&#x652F;">&#x62C9;&#x53D6;&#x8FDC;&#x7A0B;&#x6307;&#x5B9A;&#x5206;&#x652F;</h5>
 <pre><code class="lang-bash">git clone -b &#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x540D; &#x8FDC;&#x7A0B;&#x5730;&#x5740;
@@ -1628,7 +1696,7 @@ git merge dev_add --no-ff
 </code></pre>
 <p><img src="https://s2.ax1x.com/2019/09/18/nHeDPS.png" alt=""> </p>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; 951450262@qq.com 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2023-02-20 09:35:18
+2023-03-27 10:42:17
 </span></footer>
                                 
                                 </section>
@@ -1668,7 +1736,7 @@ git merge dev_add --no-ff
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"常用命令","level":"1.8.1","depth":2,"next":{"title":"里程碑","level":"1.8.2","depth":2,"path":"git/里程碑.md","ref":"git/里程碑.md","articles":[]},"previous":{"title":"git","level":"1.8","depth":1,"ref":"","articles":[{"title":"常用命令","level":"1.8.1","depth":2,"path":"git/常用命令.md","ref":"git/常用命令.md","articles":[]},{"title":"里程碑","level":"1.8.2","depth":2,"path":"git/里程碑.md","ref":"git/里程碑.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","expandable-chapters","theme-comscore","tbfed-pagefooter","-highlight","prism-themes","code","expandable-chapters-small","github","my-toolbar","hide-element","accordion","livereload"],"root":"./doc","styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 951450262@qq.com 2021","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/MrCodeFront/my-gitbook"},"livereload":{},"accordion":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"expandable-chapters-small":{},"my-toolbar":{"buttons":[{"label":"下载PDF","icon":"fa fa-file-pdf-o","url":"http://localhost:4000/book.pdf","position":"left","text":"下载PDF","target":"_blank"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"lkf","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CodeFront Document","language":"zh-hans","gitbook":"3.2.3","description":""},"file":{"path":"git/常用命令.md","mtime":"2023-02-20T01:35:18.759Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-03-07T12:59:32.544Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"常用命令","level":"1.8.1","depth":2,"next":{"title":"里程碑","level":"1.8.2","depth":2,"path":"git/里程碑.md","ref":"git/里程碑.md","articles":[]},"previous":{"title":"git","level":"1.8","depth":1,"ref":"","articles":[{"title":"常用命令","level":"1.8.1","depth":2,"path":"git/常用命令.md","ref":"git/常用命令.md","articles":[]},{"title":"里程碑","level":"1.8.2","depth":2,"path":"git/里程碑.md","ref":"git/里程碑.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-plus","expandable-chapters","theme-comscore","tbfed-pagefooter","-highlight","prism-themes","code","expandable-chapters-small","github","my-toolbar","hide-element","accordion","livereload"],"root":"./doc","styles":{"website":"./styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy 951450262@qq.com 2021","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/MrCodeFront/my-gitbook"},"livereload":{},"accordion":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"prism-themes":{},"expandable-chapters-small":{},"my-toolbar":{"buttons":[{"label":"下载PDF","icon":"fa fa-file-pdf-o","url":"http://localhost:4000/book.pdf","position":"left","text":"下载PDF","target":"_blank"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"lkf","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"CodeFront Document","language":"zh-hans","gitbook":"3.2.3","description":""},"file":{"path":"git/常用命令.md","mtime":"2023-03-27T02:42:17.424Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-03-29T01:17:14.913Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

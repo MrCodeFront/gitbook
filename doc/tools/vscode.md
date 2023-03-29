@@ -2,6 +2,18 @@
 
 https://blog.csdn.net/assassinator_567/article/details/106719647
 
+
+
+##### 插件
+
+```
+Import Cost 查看你引入的依赖模块大小
+Auto Close Tag 自动补全 html 标签
+Auto Rename Tag 自动重命名 html 标签
+```
+
+
+
 ##### VSCode格式化配置
 
 vscode-settings.json

@@ -6,6 +6,10 @@
 
 work工作区配置：https://www.aciuz.com/tech/PDF-js-workerSrc.html
 
+文字提取顺序问提（pdf Y轴倒序获取、X轴正序获取方法）：https://www.thinbug.com/q/50788543
+
+
+
 注：pdf文件必须存放在服务器上，不能获取file://协议文件，会提示跨域。
 
 ```js

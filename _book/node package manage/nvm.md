@@ -8,10 +8,14 @@ github releases 地址：[https://github.com/coreybutler/nvm-windows/releases](h
 
 
 
-##### 查看所有版本
+##### 查看版本
 
 ```bash
+# 查看本地苏所有可用版本
 nvm ls
+
+# 查看node仓库所有可用版本
+nvm ls available
 ```
 
 ##### 添加/卸载指定版本
@@ -27,6 +31,8 @@ nvm uninstall <version>
 nvm use [version]
 ```
 
+注：npm 下的全局包区分版本，pnpm 下的全局包不区分版本
+
 ##### 解决镜像下载过慢问题
 
 参考：https://blog.csdn.net/qq_32754575/article/details/102412473
@@ -38,4 +44,3 @@ where nvm 找到nvm安装路径
 node_mirror: https://npm.taobao.org/mirrors/node/
 npm_mirror: https://npm.taobao.org/mirrors/npm/
 ```
-

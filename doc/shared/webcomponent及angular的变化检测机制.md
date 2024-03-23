@@ -1,6 +1,4 @@
-# webcomponent 、angular的变化检测机制
-
----
+## webcomponent 、angular的变化检测机制
 
 
 

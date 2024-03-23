@@ -1,6 +1,6 @@
-# NG-ALAIN
+## NG-ALAIN
 
----
+
 
 官网地址：https://ng-alain.com/zh
 
@@ -52,7 +52,7 @@ ng serve 或 npm run start
 
 ###### <a id='体系架构'>体系架构</a>
 
-![https://ng-alain.com/assets/screenshot/architecture.png](https://ng-alain.com/assets/screenshot/architecture.png)
+![https://ng-alain.com/assets/screenshot/architecture.png](https://cdn.jsdelivr.net/gh/MrCodeFront/assets/md/202403221625923.png)
 
 | 类库               | 描述                                                         |
 | :----------------- | :----------------------------------------------------------- |

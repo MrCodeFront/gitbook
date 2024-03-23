@@ -1,6 +1,6 @@
-# PDF预览、文本获取及处理
+## PDF预览、文本获取及处理
 
----
+
 
 github：[GitHub - mozilla/pdf.js: PDF Reader in JavaScript](https://github.com/mozilla/pdf.js)
 
@@ -24,7 +24,7 @@ pdf路径使用 encodeURIComponent 进行编码。encodeURIComponent('https://ww
 
 最终效果：[https://mozilla.github.io/pdf.js/web/viewer.html?file=https%3A%2F%2Fwww.gjtool.cn%2Fpdfh5%2Fgit.pdf)](https://mozilla.github.io/pdf.js/web/viewer.html?file=https%3A%2F%2Fwww.gjtool.cn%2Fpdfh5%2Fgit.pdf)
 
-![](http://markdown.rossai.cn/data/image/2022/09/19/74827_qiqp_7228.png)
+![](https://cdn.jsdelivr.net/gh/MrCodeFront/assets/md/202403221623089.png)
 
 ---
 
@@ -66,18 +66,18 @@ getText(pdfUrl).then((res) => {
 });
 ```
 
-![](http://markdown.rossai.cn/data/image/2022/09/19/74984_yix3_2054.png)
+![](https://cdn.jsdelivr.net/gh/MrCodeFront/assets/md/202403221623944.png)
 
 ---
 
 ##### 数据提取及处理
 
 需处理的文件：
-![](http://markdown.rossai.cn/data/image/2022/09/19/76002_seum_6730.png)
-![](http://markdown.rossai.cn/data/image/2022/09/19/76002_rdeo_4025.png)
-![](http://markdown.rossai.cn/data/image/2022/09/19/76002_bkh7_4771.png)
-![](http://markdown.rossai.cn/data/image/2022/09/19/76002_tde2_3597.png)
-![](http://markdown.rossai.cn/data/image/2022/09/19/76003_eqoo_2390.png)
+![](https://cdn.jsdelivr.net/gh/MrCodeFront/assets/md/202403221624028.png)
+![](https://cdn.jsdelivr.net/gh/MrCodeFront/assets/md/202403221624650.png)
+![](https://cdn.jsdelivr.net/gh/MrCodeFront/assets/md/202403221624786.png)
+![](https://cdn.jsdelivr.net/gh/MrCodeFront/assets/md/202403221624798.png)
+![](https://cdn.jsdelivr.net/gh/MrCodeFront/assets/md/202403221624490.png)
 处理方法：
 
 ```js

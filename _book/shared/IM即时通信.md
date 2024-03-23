@@ -1,6 +1,6 @@
 ## IM即时通讯（Instant Messenger）
 
----
+
 
 概念：是一款跨平台（Linux Server，Windows Server），可定制的 P2P 即时通信系统（集成[多人视频会议](https://baike.baidu.com/item/多人视频会议/6541929)功能），为各行业门户网站和企事业单位提供“一站式”定制解决方案。
 
@@ -36,9 +36,9 @@
 
 缺点：轮询的时间间隔不好控制。如果要求的实时性比较高，显然使用短轮询会有明显的短板，如果设置interval的间隔过长，会导致消息延迟，而如果太短，会对服务器产生压力。
 
-![https://pic.rmb.bdstatic.com/bjh/down/f4affcebbc3d5b1724a876e648932e7a.gif](https://s2.loli.net/2022/12/02/9cILdsbhVOQZrnX.gif)
+![https://pic.rmb.bdstatic.com/bjh/down/f4affcebbc3d5b1724a876e648932e7a.gif](https://cdn.jsdelivr.net/gh/MrCodeFront/assets/md/202403221625437.gif)
 
-![](https://s2.loli.net/2022/12/02/cVdpEgofTOGeK84.gif)
+![](https://cdn.jsdelivr.net/gh/MrCodeFront/assets/md/cVdpEgofTOGeK84.gif)
 
 
 
@@ -56,7 +56,7 @@
 
 缺点：阻塞服务器请求，依旧占用资源；如果客户端有新数据发送，但服务端没有再规定时间内返回，会导致响应失败。
 
-![https://pic.rmb.bdstatic.com/bjh/down/2ded9fdd34f22d207ade6ca423f479d4.gif](https://s2.loli.net/2022/12/02/NcSJIpHYDukUaCz.gif)
+![https://pic.rmb.bdstatic.com/bjh/down/2ded9fdd34f22d207ade6ca423f479d4.gif](https://cdn.jsdelivr.net/gh/MrCodeFront/assets/md/NcSJIpHYDukUaCz.gif)
 
 
 
@@ -66,7 +66,7 @@
 
 Server-Sent是[HTML5](https://so.csdn.net/so/search?q=HTML5&spm=1001.2101.3001.7020)提出一个标准。由客户端发起与服务器之间创建TCP连接，然后并维持这个连接，直到客户端或服务器中的任何一方断开，ServerSent使用的是"问"+"答"的机制，连接创建后浏览器会周期性地发送消息至服务器询问，是否有自己的消息。
 
-![https://www.ruanyifeng.com/blogimg/asset/2017/bg2017052702.jpg](https://s2.loli.net/2022/12/02/qUdy87XEhBMYxib.jpg)
+![https://www.ruanyifeng.com/blogimg/asset/2017/bg2017052702.jpg](https://cdn.jsdelivr.net/gh/MrCodeFront/assets/md/202403221625172.jpeg)
 
 SSE的本质其实就是一个HTTP的长连接，只不过它给客户端发送的不是一次性的数据包，而是一个stream流，格式为**text/event-stream**。所以客户端不会关闭连接，会一直等着服务器发过来的新的数据流，视频播放就是这样的例子。
 
@@ -105,7 +105,7 @@ SSE的本质其实就是一个HTTP的长连接，只不过它给客户端发送�
 3. 都可以用于浏览器和服务器间的通信；
 4. 都基于TCP协议。
 
-![https://www.ruanyifeng.com/blogimg/asset/2017/bg2017051502.png](https://s2.loli.net/2022/12/02/t3DVcaSWhJCUEAB.png)
+![https://www.ruanyifeng.com/blogimg/asset/2017/bg2017051502.png](https://cdn.jsdelivr.net/gh/MrCodeFront/assets/md/t3DVcaSWhJCUEAB.png)
 
 兼容性：IE10以下不支持，现代浏览器基本都支持
 

@@ -1,6 +1,6 @@
 ## 前端模块化发展历史 (CommonJS、AMD、CMD、UMD、ES6)
 
----
+
 
 参考：
 
